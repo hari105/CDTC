@@ -1,0 +1,35 @@
+
+@media (min-width: 992px) {
+    
+  }
+  
+  
+  
+  /* Portrait tablets and small desktops */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .loginlogo
+    {
+        width: 50%;
+        height: auto;
+    }
+  
+  }
+  
+  /* Landscape phones and portrait tablets */
+  @media (max-width: 767px) {
+    .loginlogo
+    {
+        width: 40%;
+        height: auto;
+    }
+  }
+  
+  /* Portrait phones and smaller */
+  @media (max-width: 480px) {
+   
+    .loginlogo
+  {
+      width: 0%;
+      height: auto;
+  }
+  }

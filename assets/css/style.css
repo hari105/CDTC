@@ -1,0 +1,216 @@
+@media (min-width: 992px) {
+ 
+  .cdtcLogo{
+    height: auto;
+    width: 150px;
+    margin-left: 25px;
+  }
+   .navMargin{
+    margin-top: 120px;
+    
+  }
+ 
+}
+
+
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+  .cdtcLogo{
+    height: auto;
+    width: 100px;
+    margin-left: 25px;
+  }
+   .navMargin{
+    margin-top: 100px;
+  }
+ 
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+
+  .cdtcLogo{
+    height: auto;
+    width: 80px;
+    margin-left: 10px;
+  }
+   .navMargin{
+    margin-top: 100px;
+  }
+
+.fixed-top{
+  position: absolute; 
+}
+
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  
+ 
+  .cdtcLogo{
+    height: auto;
+    width: 80px;
+    margin-left: 8px;
+  }
+   .navMargin{
+    margin-top: 100px
+  }
+.fixed-top{
+  position: absolute; 
+}
+
+}
+
+
+/*--------------------------------------------*/
+
+
+
+
+.cool-link::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(0, 0, 0);
+  transition: width .3s;
+}
+.cool-link:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+
+/*--------------------------------------------*/
+
+p,ul li{
+  text-align: justify;
+  text-justify: inter-word;
+  color:#f1f1f1;
+}
+
+h1,h2,h4,h5,h6, table , strong{
+  
+  color:#f1f1f1;
+}
+html {
+  height: 100%;
+  background:url("../images/cdtc.jpeg") fixed center no-repeat;
+ 
+}
+body, .captions , .navMargin{
+ 
+  background: rgba(14, 56, 101, 0.8);
+}
+
+/*--------------------------------------------*/
+
+.clubsHeading{
+  width: 25%;
+  height: 50%;
+}
+ .captions{
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  border-radius: 2%;
+}
+.carouselImage{
+  height: 700px;
+}
+
+
+/*--------------------------------------------
+carousel image size changer
+*/
+@media (min-width: 992px) {
+  .carouselImage{
+    height: 700px;
+  }
+}
+
+
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .carouselImage{
+    height: 500px;
+  }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .carouselImage{
+    height: 400px;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .carouselImage{
+    height: 300px;
+  }
+ 
+}
+/*--------------------------------------------
+carousel image size changer 
+
+end  
+*/
+
+
+ .back {
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ul a {
+  font-size: 16px;
+}
+/*--------------------------------------------
+Course styling
+
+
+end  
+*/
+
+.course{
+  background:rgba(10,50,100,0.5);
+  padding:50px;
+
+}
+.course h2 {
+  color:rgb(255, 235, 53);
+  text-decoration-style:dotted;
+}
+
+.course .courseName {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  margin-bottom: 5%;
+
+}
+/*--------------------------------------------
+Course styling
+
+end  
+*/
+
