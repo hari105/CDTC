@@ -1,56 +1,56 @@
 <?php 
 class Forgot extends CI_Controller 
 {
-	public function __construct()
-	{
-		/*call CodeIgniter's default Constructor*/
-		parent::__construct();
-		/*load database libray manually*/
-		$this->load->database();
-		$this->load->library('session');
-		$this->load->library('email');
-		$config = array();
-$config['protocol'] = 'smtp';
-$config['smtp_host'] = 'xxx';
-$config['smtp_user'] = 'xxx';
-$config['smtp_pass'] = 'xxx';
-$config['smtp_port'] = 25;
-$this->email->initialize($config);
-		/*load Model*/
-		$this->load->helper('url');
-		//$this->load->model('Hello_model');
-	}
-	
-   public function forgot_pass()
-	{
-		if($this->input->post('forgot_pass'))
-		{
-			$email=$this->input->post('email');
-			$que=$this->db->query("select password,email from users where email='$email'");
-			$row=$que->row();
-			$user_email=$row->email;
-			if((!strcmp($email, $user_email))){
-			$password=$row->password;
-				/*Mail Code*/
-				$to = $user_email;
-				$subject = "Password";
-				$txt = "Your password is $password .";
-				$headers = "From: 16h61a0593@cvsr.ac.in" . "\r\n" .
-				"CC: 16h61a0593@cvsr.ac.in";
-
-				mail($to,$subject,$txt,$headers);
-				}
-			else{
-			$data['error']="
-Invalid Email ID !
-";
-			}
-		
-	}
-	   $this->load->view('forgotpass',@$data);	
-   }
+	 function index()
+		            {
+		            	$this->load->view('forgotPassword');
+		            }
+	public function sendCredentials()
+		            {
+		            	$this->load->database();
+		            	$htno = $_POST['htno'];
+            
+            
+            $this->db->select('*');
+            $this->db->from('users');
+            $this->db->where(array('rollNum'=>$htno));
+            $query = $this->db->get();
+            $result = $query->row();
+            $email = $result -> email;
 
 
-	            
+                        $to=$email;
+                        $subject = "CDTC Credentials";
+                       $message = "HallTicket No : ".$result->rollNum."\nPassword : ".$result->dupPwd;
+                        
+                        $headers = "From: sainathomdas@gmail.com" ;
+                        $headers .= "MIME-Version:1.0". "\r\n";
+                        $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
+
+
+                        //sending mail 
+                        if(mail($to,$subject,$message,$headers ))
+                        {
+                            $this->session->set_flashdata('pwdSendingSucess','Credentials have been sent to '.$result->email);
+                            //$_SESSION["succes"] = "Your account has been registerd";
+                             redirect('Forgot','refresh');
+                        }
+                    
+                    
+                   
+                
+                else
+                {
+                    $this->session->set_flashdata('pwdSendingError','Something went wrong. Please try after sometime.');
+
+
+                    //$this->session->set_flashdata('success','Your account has been registered');
+                
+                     redirect('Forgot','refresh');
+
+
+                }
+
+		            }	            
 }
 ?>

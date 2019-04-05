@@ -65,15 +65,15 @@ class Auth extends CI_Controller
                         'createdDate'=>date('y-m-d'),
                         'phone'=> $_POST['phone'],
                         'vkey' => md5(date('y-m-d').$_POST['username']),
-                        'verified' => '0'
+                        'verified' => '0',
+                        'dupPwd' => $_POST['password']
                     );  
                     
                     $this->db->insert('users',$data); 
                    
                         $to=$user_email;
                         $subject = "CDTC email Verification";
-                       $message = "Click on the following link to activate your account
-                        https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=$vkey";
+                       $message = "Click on the following link to activate your account\n                      https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=".$vkey;
                         
                         $headers = "From: sainathomdas@gmail.com" ;
                         $headers .= "MIME-Version:1.0". "\r\n";
@@ -95,10 +95,12 @@ class Auth extends CI_Controller
                 {
                     $this->session->set_flashdata('error','Something Went Wrong');
 
-                    $this->session->set_flashdata('success','Your account has been registered');
 
+                    //$this->session->set_flashdata('success','Your account has been registered');
                 
                      redirect('auth/register','refresh');
+
+
                 }
 
 
@@ -131,7 +133,7 @@ class Auth extends CI_Controller
                    }
                    else
                    {
-                    $this->session->set_flashdata('error','Something went wrong');
+                    $this->session->set_flashdata('error','Your account has been registered');
                     //$_SESSION["succes"] = "Your account has been registerd";
                      redirect('auth/login','refresh');
                    }
@@ -240,6 +242,11 @@ class Auth extends CI_Controller
            }
            
         
+ }
+ else{
+      $this->session->set_flashdata('error','No Account found.');
+                                    
+                                    redirect('auth/login','refresh');
  }
 }
 }

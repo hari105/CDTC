@@ -24,6 +24,8 @@ class User extends CI_Controller {
             
             $this->load->view('profile',$this->data);
         }
+
+      
 }
 
 ?>

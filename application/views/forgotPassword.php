@@ -143,45 +143,35 @@
                 <div class="row">
                     <div class="col-md-3 register-left">
                     <a  href="<?php echo base_url() ?>index.php/Home"><img src="<?php echo base_url('assets/images/cdtc.jpeg'); ?>" class=" rounded"alt=""/></a>
-                        <h3>Welcome.</h3>
+                        <h3>Welcome!</h3>
                         
                     </div>
 
                     <div class="col-md-9 register-right">
                     <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Login</h3>
-                                <?php if(isset($_SESSION['success'])) { ?>
-                                        <div class="alert alert-success"><?php echo $_SESSION['success']; ?></div>
+                                <h3 class="register-heading">Forgot Password</h3>
+                                 <?php if(isset($_SESSION['pwdSendingSucess'])) { ?>
+                                        <div class="alert alert-success"><?php echo $_SESSION['pwdSendingSucess']; ?></div>
                                     <?php
-                                }  else if  (isset($_SESSION['error'])) { ?>
-                                        <div class="alert alert-danger"><?php echo $_SESSION['error']; ?></div>
+                                }  else if  (isset($_SESSION['pwdSendingError'])) { ?>
+                                        <div class="alert alert-danger"><?php echo $_SESSION['pwdSendingError']; ?></div>
                                     <?php
                                 } ?>
                                 <div class="row register-form">
                                     <div class="col-md-12">
-                                        <form action="" method="POST">
+                                        <form action="<?php echo site_url('Forgot/sendCredentials')?>" method="POST">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Roll Num *" name="rollNum" id="rollNum" />
+                                            <input type="text" class="form-control" placeholder="Enter Hallticket No. *" name="htno" required />
                                         </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" name="password" id="password "   />
-                                        </div>
-                                        <div style="float: right;color: #5F9EA0;font-size: 14px;margin-right:8%;">
-                                        <a href="<?php echo site_url('Forgot') ?>">Forgot Password*</a>
-
-                                        </div>
-
-
-
-
+                                
                                         
-                                        <button class="btn btnRegister btn-info" name="login" >Login</button>
+                                        <button class="btn btnRegister btn-info" name="login" >Submit</button>
                                        
                                         
                                         </form>
                                         </div>
-                                        <p>Not registered? <a href="<?php echo base_url() ?>index.php/auth/register">Register now</a></p>
+                                        
                                 </div>
                             </div>
                         </div>
