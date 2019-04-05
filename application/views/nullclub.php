@@ -5,7 +5,9 @@
   height: 10px;
   border-radius: 100%;
 }
-
+*{
+  color: white;
+}
 </style>
 
 
@@ -132,76 +134,35 @@ cyber security knowledge with a unique way of conducting various sessions
 including hands-on-sessions, seminars from Industry experts..</p>
 </div>
 <div class="container " style="padding-top:50px; width: 100%;">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>S.No</th>
-          <th>Name of the Session</th>
-          <th>Date</th>
-          <th>Resource Person</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td scope="row">1</td>
-          <td>INTRODUCTORY SESSION</td>
-          <td>15-07-2015  & <br> 30-07-2015</td>
-          <td><b>P B SURYA SUBHASH</b>, STUDENT CO-ORDINATOR, NSB.</td>
-        </tr>
-        <tr>
-          <td scope="row">2</td>
-          <td>EXPLORING
-OPPORTUNITIES
-IN
-INFORMATION
-SECURITY</td>
-          <td>3-10-2015</td>
-          <td><b>Mr.SUBBARAO BHAMIDIPATI</b>,
-
-SEO,
-
-BROADRIDGE FINANCIAL
-SOLUTIONS, HYDERABAD.</td>
-        </tr>
-        <tr>
-          <td scope="row">3</td>
-          <td>ANDROID
-PENETRATION
-TESTING.</td>
-          <td>09-03-2016</td>
-          <td><b>P B SURYA SUBHASH</b>,
-STUDENT CO-ORDINATOR,
-
-NSB.</td>
-        </tr>
-      </tbody>
-    </table>
+    
 
 </div>
 <div class="container" style="padding-top:50px;">
   <h2>Achievements</h2>
-<table class="table">
-    <tr>
-      <td ><i class="fas fa-award    "></i> HYSEA Best Startup Award </td>
-      <td><img style="display: block;" src="<?php echo base_url("assets/images/null/achievements/null1.JPG") ?>" class="mr-auto rounded" alt="" ></td>
-    </tr>
-    <tr>
-      <td><i class="fas fa-award    "></i> GSEA - Hyderabad Finals</td>
-      <td><img src="<?php echo base_url("assets/images/null/achievements/null2.JPG") ?>" class="mr-auto" alt=""></td>
-    </tr>
-    <tr>
-      <td width=100><i class="fas fa-award    "></i> International Journal of Academic
-Research in Computer Engineering
-PAPER PUBLICATION</td>
-      <td><img src="<?php echo base_url("assets/images/null/achievements/null3.JPG") ?>" class="mr-auto" alt=""></td>
-    </tr>
-    <tr>
-      <td><i class="fas fa-award    "></i> Znation lab khoj 2017</td>
-      <td><img src="<?php echo base_url("assets/images/null/achievements/null4.JPG") ?>" class="mr-auto" alt=""></td>
-    </tr>
-  </table>
+ <div class="row">
+   <div class="col-sm-12 col-xs-12 col-md-4" >
+    <img style="width: 100%;height:40vh;" src="<?php echo base_url("assets/images/null/achievements/null1.JPG") ?>" class="mr-auto rounded" alt="" ><br>
+     <i class="fas fa-award"></i> HYSEA Best Startup Award
+   </div>
 
+   <div class="col-sm-12 col-xs-12 col-md-4" >
+    <img  style="width: 100%;height: 40vh;" src="<?php echo base_url("assets/images/null/achievements/null2.JPG") ?>" class="mr-auto rounded" alt="" ><br>
+     <i class="fas fa-award"></i> GSEA - Hyderabad Finals
+   </div>
+ </div>
+<br>
+ <div class="row">
+   <div class="col-sm-12 col-xs-12 col-md-4" >
+    <img style="width: 100%;height: 40vh;" src="<?php echo base_url("assets/images/null/achievements/null3.JPG") ?>" class="mr-auto rounded" alt="" ><br>
+     <i class="fas fa-award"></i>International Journal of Academic Research in Computer Engineering PAPER PUBLICATION
+   </div>
 
+   <div class="col-sm-12 col-xs-12 col-md-4" >
+    <img  style="width: 100%;height: 40vh;" src="<?php echo base_url("assets/images/null/achievements/null4.JPG") ?>" class="mr-auto rounded" alt="" ><br>
+     <i class="fas fa-award"></i>  Znation lab khoj 2017
+   </div>
+ </div>
+ <br>
 
 
   

@@ -30,14 +30,9 @@ class Auth extends CI_Controller
                     //echo 'form validated';
                     $roll = $_POST["rollNum"];
                     if (!preg_match("/^[0-9][0-9]H[0-9][0-9]A[0-9][0-9][0-9A-za-z][0-9]+$/",$roll)) {
-                        $this->session->set_flashdata('error','incorrect Roll Number');
+                        $this->session->set_flashdata('error','incorrect Rol');
                         redirect('auth/register','refresh');
                     } 
-                    $year = substr($roll,0,2);
-                    if('20'.$year > date("Y")){
-                         $this->session->set_flashdata('error','incorrect Roll Number');
-                        redirect('auth/register','refresh');
-                    }
                     $data= array (
                         'rollNum'=> $_POST['rollNum'],
                         'username'=> $_POST['username'],
@@ -51,7 +46,7 @@ class Auth extends CI_Controller
                     );
                     $this->db->insert('users',$data); 
 
-                    $this->session->set_flashdata('success','Your account has been registered');
+                    $this->session->set_flashdata('success','Your account has been registerd');
                     //$_SESSION["succes"] = "Your account has been registerd";
                     redirect('auth/register','refresh');
                 }
@@ -91,7 +86,7 @@ class Auth extends CI_Controller
                     // $this->session->set_flashdata('success','YOure logged in' );
                         if( $password === $user->password) 
                         {
-                            $_SESSION["success"] = "You're logged in";
+                            $_SESSION["success"] = "YOure logged in";
                             $_SESSION['user-logged'] = TRUE ;
                             $_SESSION['username'] = $user->username;
                             $_SESSION['rollNum'] = $user->rollNum;

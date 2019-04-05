@@ -69,7 +69,7 @@ ul, ol {
 }
 </style>
 
-<footer class="section footer-classic context-dark bg-image " style=" background: rgba(14, 56, 101, 0.9);;">
+<footer class="section footer-classic context-dark bg-image " style=" position:relative; background: rgba(14, 56, 101, 0.9);;">
       <div class="agifooter">
         <a  href="https://anurag.edu.in/" target="_blank" title="AGI"><img class="rounded float-left agilogo" src="<?php echo base_url('assets/images/agiLogo.JPG');?>" ></a>
       </div>
@@ -78,15 +78,15 @@ ul, ol {
           <div class="row row-30">
             
             <div class="col-md-4 col-xl-4">
-			<br>
-			  <dl class="contact-list">
+      <br>
+        <dl class="contact-list">
                 <dt>College Website:</dt>
                 <dd><a href="https://anurag.edu.in/" target="_blank">https://anurag.edu.in/</a></dd>
               </dl>
               <div class="pr-xl-4 ">
                 <!-- Rights-->
                 <p class="rights"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>CDTC</span><span>. </span><span>All Rights Reserved.</span></p>
-			  </div>
+        </div>
             </div>
             <div class="col-md-4 col-xl-5 contacts" style="z-index: 999;">
               
@@ -101,7 +101,7 @@ Telangana, INDIA - 500 088 </dd>
               
             </div>
             <div class="col-md-4 col-xl-3 links"><br>
-			<dl class="contact-list">
+      <dl class="contact-list">
                 <dt>Contacts:</dt>
                 <dd><a href="tel:#">+91 99999 88888</a> <br> <a href="tel:#">+91 99999 88888</a>
                 </dd>

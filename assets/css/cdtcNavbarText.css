@@ -1,0 +1,30 @@
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+	.cdtcText{
+		display: block;
+	}
+ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+	.cdtcText{
+		display: block;
+	}
+}
+@media (min-width:640px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+.cdtcText{
+		display: block;
+	}}
+
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+.cdtcText{
+		display: none;
+	} 
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+.cdtcText{
+		display: none;
+	} 
+ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
+.cdtcText{
+		display: none;
+	} 
+}
