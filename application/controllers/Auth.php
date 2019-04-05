@@ -3,7 +3,20 @@
 class Auth extends CI_Controller 
 {
 
-
+    public function __construct()
+	{
+		/*call CodeIgniter's default Constructor*/
+		parent::__construct();
+		/*load database libray manually*/
+		$this->load->database();
+		$this->load->library('session');
+		$this->load->library('email');
+		
+		/*load Model*/
+		$this->load->helper('url');
+		//$this->load->model('Hello_model');
+    }
+    
     public function logout(){
         //unset($_SESSION);
         session_destroy();
@@ -13,7 +26,13 @@ class Auth extends CI_Controller
     public function register()
     {
         //view
-     
+                	/*load database libray manually*/
+		$this->load->database();
+		$this->load->library('session');
+		$this->load->library('email');
+		
+		/*load Model*/
+		$this->load->helper('url');
 
                 if(isset($_POST['register']))
                 {
@@ -30,14 +49,11 @@ class Auth extends CI_Controller
                     //echo 'form validated';
                     $roll = $_POST["rollNum"];
                     if (!preg_match("/^[0-9][0-9]H[0-9][0-9]A[0-9][0-9][0-9A-za-z][0-9]+$/",$roll)) {
-                        $this->session->set_flashdata('error','incorrect Roll Number');
+                        $this->session->set_flashdata('error','incorrect Rol');
                         redirect('auth/register','refresh');
                     } 
-                    $year = substr($roll,0,2);
-                    if('20'.$year > date("Y")){
-                         $this->session->set_flashdata('error','incorrect Roll Number');
-                        redirect('auth/register','refresh');
-                    }
+                    $vkey= md5(date('y-m-d').$_POST['username']);
+                    $user_email = $_POST['email'];
                     $data= array (
                         'rollNum'=> $_POST['rollNum'],
                         'username'=> $_POST['username'],
@@ -45,15 +61,37 @@ class Auth extends CI_Controller
                         'password'=> md5($_POST['password']),
                         'gender'=> $_POST['gender'],
                         'createdDate'=>date('y-m-d'),
-                        'phone'=> $_POST['phone']
-                        
-                        
-                    );
+                        'phone'=> $_POST['phone'],
+                        'vkey' => md5(date('y-m-d').$_POST['username']),
+                        'verified' => '0'
+                    );  
+                    
                     $this->db->insert('users',$data); 
+                   
+                        $to=$user_email;
+                        $subject = "Email Verification";
+                        $message = "<a href= 'https://cdtcagi.000webhostapp.com/index.php/Auth/Verify?vkey=$vkey '>Click Here </a> to Register your Account";
+                        //$message = " Hi";
+                        $headers = "From: 16h61a0593@cvsr.ac.in" ;
+                        $headers .= "MIME-Version:1.0". "\r\n";
+                        $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
 
-                    $this->session->set_flashdata('success','Your account has been registered');
+                        //sending mail 
+                        if(mail($to,$subject,$message,$headers ))
+                        {
+                            $this->session->set_flashdata('success','Thank you for registration. We have sent you a verification link.');
+                            //$_SESSION["succes"] = "Your account has been registerd";
+                             redirect('auth/register','refresh');
+                        }
+                    
+                    
+                   
+                }
+                else
+                {
+                    $this->session->set_flashdata('error','Something Went Wrong');
                     //$_SESSION["succes"] = "Your account has been registerd";
-                    redirect('auth/register','refresh');
+                     redirect('auth/register','refresh');
                 }
 
 
@@ -66,6 +104,44 @@ class Auth extends CI_Controller
        
 
     
+    }
+
+    public function Verify()
+    {
+        if(isset($_GET['vkey'])) {
+                $vkey= $_GET['vkey'];
+                $que=$this->db->query("SELECT verified,vkey from users where verified = 0 and vkey='$vkey' LIMIT 1");
+                $row=$que->row();
+			    $user_vkey=$row->vkey;
+                if((!strcmp($vkey, $user_vkey)))
+                {
+                   $update = $this->db->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey' LIMIT 1");
+                   if($update)
+                   {
+                    $this->session->set_flashdata('success','Your Account is Verified, Please Login now');
+                    //$_SESSION["succes"] = "Your account has been registerd";
+                     redirect('auth/login','refresh');
+                   }
+                   else
+                   {
+                    $this->session->set_flashdata('error','Something went wrong');
+                    //$_SESSION["succes"] = "Your account has been registerd";
+                     redirect('auth/login','refresh');
+                   }
+                }
+                else
+                {
+                    $this->session->set_flashdata('error','This Account is invalid or already Verified.');
+                    //$_SESSION["succes"] = "Your account has been registerd";
+                     redirect('auth/register','refresh');
+                }
+        }
+        else
+        {
+            $this->session->set_flashdata('error','Something Went Wrong');
+                    //$_SESSION["succes"] = "Your account has been registerd";
+                     redirect('auth/register','refresh');
+        }
     }
 
     public function login()
@@ -85,42 +161,63 @@ class Auth extends CI_Controller
             $this->db->where(array('rollNum'=>$rollNum));
             $query = $this->db->get();
             $user = $query->row();
-                if($user != NULL )
-                {
-                    if($user -> email){
-                    // $this->session->set_flashdata('success','YOure logged in' );
-                        if( $password === $user->password) 
-                        {
-                            $_SESSION["success"] = "You're logged in";
-                            $_SESSION['user-logged'] = TRUE ;
-                            $_SESSION['username'] = $user->username;
-                            $_SESSION['rollNum'] = $user->rollNum;
-
-                            redirect('user/profile','refresh');
-                        }
-                        else
-                        {
-                            $this->session->set_flashdata('error','Incorrect Password.');
-                            //$_SESSION["error"] = "Incorrect Password.";
-                            redirect('auth/login','refresh');
-                        }
-                    }
-                   }
-                      else {
-                    $this->session->set_flashdata('error','No account Found.');
-                        //$_SESSION["error"] = "No account Found.";
-                        redirect('auth/login','refresh');
-                    }
                 
+                
+                    if($user != NULL ){
+                        
+                        $que=$this->db->query("SELECT * from users where rollNum = '$rollNum' ");
+                        $row=$que->row();
+                        $verified=$row->verified;
+                        if($user -> email){
+                        // $this->session->set_flashdata('success','YOure logged in' );
+                            
+                                if( $password === $user->password) 
+                                {
+                                    
+                                    if($verified) {
+                                        
+                                        $_SESSION["success"] = "YOure logged in";
+                                        $_SESSION['user-logged'] = TRUE ;
+                                        $_SESSION['username'] = $user->username;
+                                        $_SESSION['rollNum'] = $user->rollNum;
+
+                                        redirect('user/profile','refresh');
+                                    }
+                                    else {
+                                        $this->session->set_flashdata('error', 'Your Account is not Verified Yet.');
+                                                //$_SESSION["error"] = "No account Found.";
+                                                redirect('auth/login','refresh');
+                                            }
+                                }
+                                else
+                                {
+                                    $this->session->set_flashdata('error','Incorrect Password.');
+                                    //$_SESSION["error"] = "Incorrect Password.";
+                                    redirect('auth/login','refresh');
+                                }
+                            
+                            
+                        }
+                    }
+                    else {
+                        $this->session->set_flashdata('error','No account Found.');
+                            //$_SESSION["error"] = "No account Found.";
+                            redirect('auth/login','refresh');
+                    }
+                    
                     if ( isset($_SESSION['user-logged']) )
                     {
-                        redirect('user/profile','refresh');
+                            redirect('user/profile','refresh');
                     }
                 
+                
+                }
+                $this->load->view("login");
            }
            
-        $this->load->view("login");
-    }
-}
+        
+ }
+    
+
 
 ?>

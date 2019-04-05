@@ -69,7 +69,7 @@ ul, ol {
 }
 </style>
 
-<footer class="section footer-classic context-dark bg-image " style=" background: rgba(14, 56, 101, 0.9);;">
+<footer class="section footer-classic context-dark bg-image " style=" position:relative; background: rgba(14, 56, 101, 0.9);;">
       <div class="agifooter">
         <a  href="https://anurag.edu.in/" target="_blank" title="AGI"><img class="rounded float-left agilogo" src="<?php echo base_url('assets/images/agiLogo.JPG');?>" ></a>
       </div>
