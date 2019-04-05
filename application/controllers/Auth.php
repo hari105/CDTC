@@ -4,17 +4,17 @@ class Auth extends CI_Controller
 {
 
     public function __construct()
-	{
-		/*call CodeIgniter's default Constructor*/
-		parent::__construct();
-		/*load database libray manually*/
-		$this->load->database();
-		$this->load->library('session');
-		$this->load->library('email');
-		
-		/*load Model*/
-		$this->load->helper('url');
-		//$this->load->model('Hello_model');
+    {
+        /*call CodeIgniter's default Constructor*/
+        parent::__construct();
+        /*load database libray manually*/
+        $this->load->database();
+        $this->load->library('session');
+        $this->load->library('email');
+        
+        /*load Model*/
+        $this->load->helper('url');
+        //$this->load->model('Hello_model');
     }
     
     public function logout(){
@@ -26,13 +26,13 @@ class Auth extends CI_Controller
     public function register()
     {
         //view
-                	/*load database libray manually*/
-		$this->load->database();
-		$this->load->library('session');
-		$this->load->library('email');
-		
-		/*load Model*/
-		$this->load->helper('url');
+                    /*load database libray manually*/
+        $this->load->database();
+        $this->load->library('session');
+        $this->load->library('email');
+        
+        /*load Model*/
+        $this->load->helper('url');
 
                 if(isset($_POST['register']))
                 {
@@ -71,10 +71,11 @@ class Auth extends CI_Controller
                     $this->db->insert('users',$data); 
                    
                         $to=$user_email;
-                        $subject = "Email Verification";
-                        $message = "<a href= 'https://cdtcagi.000webhostapp.com/index.php/Auth/Verify?vkey=$vkey '>Click Here </a> to Register your Account";
-                        //$message = " Hi";
-                        $headers = "From: 16h61a0593@cvsr.ac.in" ;
+                        $subject = "CDTC email Verification";
+                       $message = "Click on the following link to activate your account
+                        https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=$vkey";
+                        
+                        $headers = "From: sainathomdas@gmail.com" ;
                         $headers .= "MIME-Version:1.0". "\r\n";
                         $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
 
@@ -96,10 +97,7 @@ class Auth extends CI_Controller
 
                     $this->session->set_flashdata('success','Your account has been registered');
 
-                    $this->session->set_flashdata('success','Your account has been registerd');
-
-
-                    //$_SESSION["succes"] = "Your account has been registerd";
+                
                      redirect('auth/register','refresh');
                 }
 
@@ -121,14 +119,14 @@ class Auth extends CI_Controller
                 $vkey= $_GET['vkey'];
                 $que=$this->db->query("SELECT verified,vkey from users where verified = 0 and vkey='$vkey' LIMIT 1");
                 $row=$que->row();
-			    $user_vkey=$row->vkey;
+                $user_vkey=$row->vkey;
                 if((!strcmp($vkey, $user_vkey)))
                 {
                    $update = $this->db->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey' LIMIT 1");
                    if($update)
                    {
                     $this->session->set_flashdata('success','Your Account is Verified, Please Login now');
-                    //$_SESSION["succes"] = "Your account has been registerd";
+      
                      redirect('auth/login','refresh');
                    }
                    else
@@ -156,6 +154,7 @@ class Auth extends CI_Controller
     public function login()
     {
 
+ $this->load->view("login");
         
         $this->form_validation->set_rules('rollNum', 'RollNum', 'trim|required');   
         $this->form_validation->set_rules('password', 'password', 'required');
@@ -206,7 +205,7 @@ class Auth extends CI_Controller
                                         redirect('user/profile','refresh');
                                     }
                                     else {
-                                        $this->session->set_flashdata('error', 'Your Account is not Verified Yet.');
+                                        $this->session->set_flashdata('error', 'InCorrect password');
                                                 //$_SESSION["error"] = "No account Found.";
                                                 redirect('auth/login','refresh');
                                             }
@@ -221,8 +220,11 @@ class Auth extends CI_Controller
                             
                         }
                     }
-                    else {
-                        $this->session->set_flashdata('error','No account Found.');
+                    else {  
+                            $roll = $_POST['rollNum'];
+                          $query=$this->db->query("SELECT createdDate from users where verified = 0 and rollNum='$roll' LIMIT 1");
+                $r=$query->row();
+                        $this->session->set_flashdata('error','Your Account is not Verified Yet.Please click on the link which was sent to your mail on '.$r->createdDate.' (yy-mm-dd)');
                             //$_SESSION["error"] = "No account Found.";
                             redirect('auth/login','refresh');
                     }
@@ -234,11 +236,14 @@ class Auth extends CI_Controller
                 
                 
                 }
-                $this->load->view("login");
+               
            }
            
         
  }
+}
+}
+}
     
 
 
