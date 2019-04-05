@@ -46,7 +46,7 @@ class Auth extends CI_Controller
                     );
                     $this->db->insert('users',$data); 
 
-                    $this->session->set_flashdata('success','Your account has been registerd');
+                    $this->session->set_flashdata('success','Your account has been registered');
                     //$_SESSION["succes"] = "Your account has been registerd";
                     redirect('auth/register','refresh');
                 }
