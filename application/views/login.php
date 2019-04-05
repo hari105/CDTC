@@ -162,10 +162,10 @@
                                     <div class="col-md-12">
                                         <form action="" method="POST">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Roll Num *" name="rollNum" id="rollNum" />
+                                            <input type="text" class="form-control" placeholder="Roll Num *" name="rollNum" id="rollNum" required style="text-transform: uppercase;" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" name="password" id="password "   />
+                                            <input type="password" class="form-control" placeholder="Password *" name="password" id="password "   required />
                                         </div>
                                         <div style="float: right;color: #5F9EA0;font-size: 14px;margin-right:8%;">
                                         <a href="<?php echo site_url('Forgot') ?>">Forgot Password*</a>

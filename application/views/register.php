@@ -150,12 +150,12 @@
                                     <form action="" method="POST">
                                     <div class="form-group">
                                        
-                                       <input type="text" class="form-control" placeholder="Roll No. *" name="rollNum" id="rollNum"  required=""/>
+                                       <input type="text" class="form-control" placeholder="Roll No. *" name="rollNum" id="rollNum"  required style="text-transform: uppercase;" />
                                        <?php echo form_error('password','<span class="help-block">','</span>'); ?>
                                    </div>
                                         <div class="form-group">
                                        
-                                            <input type="text" class="form-control" placeholder="UserName *" name="username" id="username"  required=""/>
+                                            <input type="text" class="form-control" placeholder="UserName *" name="username" id="username"  required style="text-transform: capitalize;" />
                                             <?php echo form_error('password','<span class="help-block">','</span>'); ?>
                                         </div>
                                      
