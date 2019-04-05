@@ -25,6 +25,10 @@ hr {
   width: 10px;
   height: 10px;
   border-radius: 100%;
+
+}
+
+
 </style>
 <div class="container " text-size="40px;" style="padding: 20px;">
     <center id="about">
@@ -349,7 +353,8 @@ hr {
 <div class="container">
 
 <h2 class="chead table" align="center">List of trainings conducted</h2>
-<table style="width:80%" align="center" class=" table">
+
+<table align="center" class=" table" style="overflow-x: scroll;overflow-y: hidden;display: block;">
     <tr>
     <th align="center">S.No</th>
     <th>Name of the event/ workshop training</th>
@@ -448,6 +453,7 @@ hr {
   </tr>
 
 </table>
+ 
 </div>
 <hr>
 <div class="container">

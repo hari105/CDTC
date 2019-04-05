@@ -325,6 +325,7 @@ in real time.
       
        </div>
 </div>
+<br>
 <!-- /CLub Course -->
 
 <?php $this->load->view('common/footer.php') ?>

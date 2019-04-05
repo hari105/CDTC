@@ -8,10 +8,12 @@
    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <!-- css links -->
      <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/card.css'); ?>">
      <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css'); ?>">
    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/backToTop.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/cdtcNavbarText.css'); ?>">
    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
    
      <!--logo at tab -->
@@ -67,7 +69,7 @@
 </div> 
 <nav class="navbar navbar-expand-sm navbar-inverse navbar-light bg-light justify-content-center sticky-top " id="navbarlinks">
   <a class="navbar-brand" href="<?php echo base_url() ?>index.php/Home"  title="AGI"><img class="rounded cdtcLogo" src="<?php //echo base_url('assets/images/cdtc.jpeg');?>"></a>
-
+  <a class="navbar-brand cdtcText" href="<?php echo base_url() ?>index.php/Home"><b>CDTC</b></a>
 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon ml-auto"></span>
   </button> 

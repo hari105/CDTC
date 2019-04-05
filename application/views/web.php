@@ -4,6 +4,10 @@
   width: 10px;
   height: 10px;
   border-radius: 100%;
+}
+ a:hover{
+  color: yellow;
+}
 </style> 
 <div class="container " text-size="40px;" style="padding: 20px;">
     <center id="about">
@@ -86,9 +90,9 @@
     <li>4. Training on static web page designing was conducted on 30-sep-2019.</li>
   </ul>
   <br>
-  <h4><u>These are the few Websites designed by web club students</u></h4>
+  <h4><u>The following are the few Websites designed by web club students</u></h4>
   
-  <ul type="square" style="overflow: hidden;">
+  <ul type="square" style="overflow: hidden;" class="weblinks">
     <li>-><a href="http://www.anuragweb.club/icacii/">http://www.anuragweb.club/icacii/</a></li>
     <li>-><a href="http://epolicecomplaint.anuragweb.club/aboutus.html">http://epolicecomplaint.anuragweb.club/aboutus.html</a></li>
     <li>-><a href="http://mysmartcity.anuragweb.club/aboutus.html">http://mysmartcity.anuragweb.club/aboutus.html</a></li>

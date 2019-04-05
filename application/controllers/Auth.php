@@ -52,8 +52,10 @@ class Auth extends CI_Controller
                         $this->session->set_flashdata('error','incorrect Rol');
                         redirect('auth/register','refresh');
                     } 
+
                     $vkey= md5(date('y-m-d').$_POST['username']);
                     $user_email = $_POST['email'];
+
                     $data= array (
                         'rollNum'=> $_POST['rollNum'],
                         'username'=> $_POST['username'],
@@ -76,6 +78,7 @@ class Auth extends CI_Controller
                         $headers .= "MIME-Version:1.0". "\r\n";
                         $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
 
+
                         //sending mail 
                         if(mail($to,$subject,$message,$headers ))
                         {
@@ -90,6 +93,9 @@ class Auth extends CI_Controller
                 else
                 {
                     $this->session->set_flashdata('error','Something Went Wrong');
+
+                    $this->session->set_flashdata('success','Your account has been registerd');
+
                     //$_SESSION["succes"] = "Your account has been registerd";
                      redirect('auth/register','refresh');
                 }
@@ -161,6 +167,7 @@ class Auth extends CI_Controller
             $this->db->where(array('rollNum'=>$rollNum));
             $query = $this->db->get();
             $user = $query->row();
+
                 
                 
                     if($user != NULL ){
@@ -180,6 +187,18 @@ class Auth extends CI_Controller
                                         $_SESSION['user-logged'] = TRUE ;
                                         $_SESSION['username'] = $user->username;
                                         $_SESSION['rollNum'] = $user->rollNum;
+
+                if($user != NULL )
+                {
+                    if($user -> email){
+                    // $this->session->set_flashdata('success','YOure logged in' );
+                        if( $password === $user->password) 
+                        {
+                            $_SESSION["success"] = "YOure logged in";
+                            $_SESSION['user-logged'] = TRUE ;
+                            $_SESSION['username'] = $user->username;
+                            $_SESSION['rollNum'] = $user->rollNum;
+
 
                                         redirect('user/profile','refresh');
                                     }
