@@ -121,30 +121,39 @@ class Auth extends CI_Controller
             $vkey= $_GET['vkey'];
             $que=$this->db->query("SELECT verified,vkey from users where verified = 0 and vkey='$vkey' LIMIT 1");
             $row=$que->row();
-            $user_vkey=$row->vkey;
-            if((!strcmp($vkey, $user_vkey)))
+            if($row)
             {
-               $update = $this->db->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey' LIMIT 1");
-               if($update)
-               {
-                $this->session->set_flashdata('success','Your Account is Verified, Please Login now');
+                $user_vkey=$row->vkey;
+                if((!strcmp($vkey, $user_vkey)))
+                {
+                 $update = $this->db->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey' LIMIT 1");
+                 if($update)
+                 {
+                    $this->session->set_flashdata('success','Your Account is Verified, Please Login now');
 
-                redirect('auth/login','refresh');
+                    redirect('auth/login','refresh');
+                }
+                else
+                {
+                    $this->session->set_flashdata('error','Unknown error occured.Please try again!');
+                    //$_SESSION["succes"] = "Your account has been registerd";
+                    redirect('auth/login','refresh');
+                }
             }
             else
             {
-                $this->session->set_flashdata('error','Your account has been registered');
-                    //$_SESSION["succes"] = "Your account has been registerd";
-                redirect('auth/login','refresh');
+                $this->session->set_flashdata('error','The link was expired!');
+                    
+                redirect('auth/register','refresh');
             }
         }
-        else
-        {
-            $this->session->set_flashdata('error','This Account is invalid or already Verified.');
+        else{
+             $this->session->set_flashdata('error','This Account is invalid or already Verified.');
                     //$_SESSION["succes"] = "Your account has been registerd";
-            redirect('auth/register','refresh');
+                redirect('auth/register','refresh');
+            }
         }
-    }
+    
     else
     {
         $this->session->set_flashdata('error','Something Went Wrong');
@@ -156,13 +165,13 @@ class Auth extends CI_Controller
 public function login()
 {
 
- $this->load->view("login");
+   $this->load->view("login");
 
- $this->form_validation->set_rules('rollNum', 'RollNum', 'trim|required');   
- $this->form_validation->set_rules('password', 'password', 'required');
+   $this->form_validation->set_rules('rollNum', 'RollNum', 'trim|required');   
+   $this->form_validation->set_rules('password', 'password', 'required');
 
- if( $this->form_validation->run() ==TRUE)
- {
+   if( $this->form_validation->run() ==TRUE)
+   {
     $rollNum = $_POST['rollNum'];
     $password = md5($_POST['password']);
 
@@ -215,12 +224,12 @@ public function login()
 
                     }
                     else{
-                     $this->session->set_flashdata('error','Incorrect Credentials');
+                       $this->session->set_flashdata('error','Incorrect Credentials');
 
-                     redirect('auth/login','refresh');
-                 }
-             }
-             else {  
+                       redirect('auth/login','refresh');
+                   }
+               }
+               else {  
                 $roll = $_POST['rollNum'];
                 $query=$this->db->query("SELECT createdDate from users where verified = 0 and rollNum='$roll' LIMIT 1");
                 $r=$query->row();
