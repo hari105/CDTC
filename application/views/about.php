@@ -54,7 +54,7 @@ ul{
 	display:inline-block;
 }
 
-<?php $this->load->view('common/header.php') ?> 
+
            
 
 
@@ -204,7 +204,7 @@ ul{
       </li>
       <li class="col-12 col-md-6 col-lg-4 text-center">
           <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="<?php echo base_url("assets/images/ourpics/akhil.jpg") ?>" class="img-responsive" alt=""></figure>
+            <figure><img src="<?php echo base_url("assets/images/ourpics/akhil.JPG") ?>" class="img-responsive" alt=""></figure>
             <h3><a href="#">Akhil Ganti </a></h3>
             <p style="text-align:center;"> Web Developer <br> 16H61A0578</p>
             <ul class="follow-us clearfix">
