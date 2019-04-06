@@ -72,7 +72,7 @@ ul, ol {
 }
 </style>
 
-      <footer class="section footer-classic context-dark bg-image " style="background: rgba(14, 56, 101, 0.9);">
+      <footer class="section footer-classic context-dark bg-image " style="background: rgba(14, 56, 101, 0.9); padding-left: 4%;">
       <div class="row justify-content-center">
             
       <div class="col-md-3 col-xl-1 float-right" >
