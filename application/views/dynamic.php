@@ -25,7 +25,7 @@ connectivity.</li>
 
         <h2>Outcome:</h2>
         <ul style="list-style-type:square; " >
-            <li>Students are able to develop a dynamic web pages.</li>
+            <li>Students will be able to develop a dynamic web pages.</li>
             
         </ul>
 <br>

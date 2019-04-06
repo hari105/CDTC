@@ -48,12 +48,12 @@ class Auth extends CI_Controller
             {
                     //echo 'form validated';
                 $roll = $_POST["rollNum"];
-                if (!preg_match("/^[0-9][0-9]H[0-9][0-9]A[0-9][0-9][0-9A-za-z][0-9]+$/",$roll)) {
-                    $this->session->set_flashdata('error','incorrect Rol');
+                if (!preg_match("/^[0-9][0-9][h,H][0-9][0-9][a,A][0-9][0-9][0-9A-za-z][0-9]+$/",$roll)) {
+                    $this->session->set_flashdata('error','Incorrect Roll No.');
                     redirect('auth/register','refresh');
                 } 
 
-                $vkey= md5(date('y-m-d').$_POST['username']);
+                $vkey= md5(time().$_POST['rollNum']);
                 $user_email = $_POST['email'];
 
                 $data= array (
@@ -64,7 +64,7 @@ class Auth extends CI_Controller
                     'gender'=> $_POST['gender'],
                     'createdDate'=>date('y-m-d'),
                     'phone'=> $_POST['phone'],
-                    'vkey' => md5(date('y-m-d').$_POST['username']),
+                    'vkey' => md5(time().$_POST['rollNum']),
                     'verified' => '0',
                     'dupPwd' => $_POST['password']
                 );  
@@ -73,8 +73,8 @@ class Auth extends CI_Controller
 
                 $to=$user_email;
                 $subject = "CDTC email Verification";
-                $message = "Click on the following link to activate your account\n                      https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=".$vkey;
-
+                $message ="Click on the following link to activate your account:: ";
+                $message .= "https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=$vkey";
                 $headers = "From: sainathomdas@gmail.com" ;
                 $headers .= "MIME-Version:1.0". "\r\n";
                 $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
@@ -121,30 +121,39 @@ class Auth extends CI_Controller
             $vkey= $_GET['vkey'];
             $que=$this->db->query("SELECT verified,vkey from users where verified = 0 and vkey='$vkey' LIMIT 1");
             $row=$que->row();
-            $user_vkey=$row->vkey;
-            if((!strcmp($vkey, $user_vkey)))
+            if($row)
             {
-             $update = $this->db->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey' LIMIT 1");
-             if($update)
-             {
-                $this->session->set_flashdata('success','Your Account is Verified, Please Login now');
+                $user_vkey=$row->vkey;
+                if((!strcmp($vkey, $user_vkey)))
+                {
+                 $update = $this->db->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey' LIMIT 1");
+                 if($update)
+                 {
+                    $this->session->set_flashdata('success','Your Account is Verified, Please Login now');
 
-                redirect('auth/login','refresh');
+                    redirect('auth/login','refresh');
+                }
+                else
+                {
+                    $this->session->set_flashdata('error','Unknown error occured.Please try again!');
+                    //$_SESSION["succes"] = "Your account has been registerd";
+                    redirect('auth/login','refresh');
+                }
             }
             else
             {
-                $this->session->set_flashdata('error','Your account has been registered');
-                    //$_SESSION["succes"] = "Your account has been registerd";
-                redirect('auth/login','refresh');
+                $this->session->set_flashdata('error','The link was expired!');
+                    
+                redirect('auth/register','refresh');
             }
         }
-        else
-        {
-            $this->session->set_flashdata('error','This Account is invalid or already Verified.');
+        else{
+             $this->session->set_flashdata('error','This Account is invalid or already Verified.');
                     //$_SESSION["succes"] = "Your account has been registerd";
-            redirect('auth/register','refresh');
+                redirect('auth/register','refresh');
+            }
         }
-    }
+    
     else
     {
         $this->session->set_flashdata('error','Something Went Wrong');
@@ -211,7 +220,7 @@ public function login()
                                 redirect('auth/login','refresh');
                             }
                         }
-                       
+
 
                     }
                     else{
@@ -237,11 +246,11 @@ public function login()
 
 
         }
-         else{
-                    $this->session->set_flashdata('error', 'Incorrect password');
+        else{
+            $this->session->set_flashdata('error', 'Incorrect password');
                                                 //$_SESSION["error"] = "No account Found.";
-                                redirect('auth/login','refresh');
-            }
+            redirect('auth/login','refresh');
+        }
 
     }
 

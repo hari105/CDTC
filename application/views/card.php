@@ -1,6 +1,7 @@
 
-<div class="box" style="background-color:rgb(23, 23, 24);" id="clubs">
+<div class="box" style="background-color:rgb(23, 23, 24,0.5);" id="clubs">
     <div class="container">
+
      	<div class="row">
 			 
 			    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -62,7 +63,8 @@
 				
 				
 		
-		</div>		
+		</div>
+		
     </div>
      <div class="container">
      	<div class="row">

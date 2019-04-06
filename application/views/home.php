@@ -8,7 +8,7 @@
 }
 #mainImage{
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .sec1{
   position: relative;
@@ -28,7 +28,7 @@
 <section class="sec1 container" id="mainImage">
            
     <br><br>
-    <h1>About CDTC</h1>
+    <h1>CDTC</h1>
     <p>
         <b>Center for Development of Technical Competencies (CDTC) </b>  <br>
         To bridge the gap between the needs of the industry and the academic

@@ -10,13 +10,40 @@
 }
 @media (min-width:640px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 .cdtcText{
-		display: block;
-	}}
+		display: none;
+	}
+
+}
+	@media (min-width:700px)  { 
+.cdtcText{
+		display: none;
+	}
+		 ul li  {
+    
+    padding: 10px 12px 10px 12px;
+    font-size: 14px;
+    }
+    li a{
+      /*text-transform: uppercase;*/
+      font-size:14px;
+    }
+
+}
 
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
 .cdtcText{
 		display: none;
 	} 
+
+	 ul li  {
+    
+    padding: 10px 25px 10px 25px;
+    font-size: 14px;
+    }
+    li a{
+      /*text-transform: uppercase;*/
+      font-size:16px;
+    }
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
 .cdtcText{
@@ -27,4 +54,13 @@
 .cdtcText{
 		display: none;
 	} 
+	ul li  {
+    
+    padding: 15px 30px 15px 30px;
+    font-size: 14px;
+    }
+    li a{
+      /*text-transform: uppercase;*/
+      font-size:18px;
+    }
 }

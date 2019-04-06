@@ -127,7 +127,7 @@ h4 {
         <h1 >Android Club</h1>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-out-up">
                 
                     <div class="card-block">
                        
@@ -159,7 +159,7 @@ h4 {
         <h1 >MaLai Club</h1>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-out-up">
                 
                     <div class="card-block">
                        
@@ -193,7 +193,7 @@ algorithms to solve the real world problems.
         <h1 >IoT Club</h1>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-out-up">
                 
                     <div class="card-block">
                        
@@ -213,7 +213,7 @@ physical world and the cyber space.
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-out-up">
                 
                     <div class="card-block">
                        
@@ -247,7 +247,7 @@ physical world and the cyber space.
         <h1 >Web Club</h1>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-out-up">
                 
                     <div class="card-block">
                        
@@ -256,7 +256,7 @@ physical world and the cyber space.
                             <a>Outcome :</a>
                         </div>
                         <div class="card-text">
-                        Students are able to develop a responsive static web pages.
+                        Students will be able to develop a responsive static web pages.
                         </div>
                     </div>
                     <div class="card-footer">
@@ -266,7 +266,7 @@ physical world and the cyber space.
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-out-up">
                 
                     <div class="card-block">
                        
@@ -275,7 +275,7 @@ physical world and the cyber space.
                             <a>Outcome :</a>
                         </div>
                         <div class="card-text">
-                        Students are able to develop a dynamic web pages.
+                        Students will be able to develop a dynamic web pages.
                         </div>
                     </div>
                     <div class="card-footer">
@@ -299,7 +299,7 @@ physical world and the cyber space.
         <h1 >NULL Club</h1>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
+                <div class="card" data-aos="zoom-out-up">
                 
                     <div class="card-block">
                        

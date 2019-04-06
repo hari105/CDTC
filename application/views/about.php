@@ -1,3 +1,4 @@
+
 c<?php $this->load->view('common/header.php') ?> 
 <style>
 .row.heading h2 {
@@ -52,6 +53,10 @@ ul{
 .practice-area .inner img{
 	display:inline-block;
 }
+
+<?php $this->load->view('common/header.php') ?> 
+           
+
 
 
 .team-members{

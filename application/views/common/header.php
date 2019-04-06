@@ -21,15 +21,7 @@
   *{
     font-family: 'Philosopher', sans-serif;
   }
-  ul li  {
-    
-    padding: 10px 30px 10px 30px;
-    font-size: 14px;
-    }
-    li a{
-      /*text-transform: uppercase;*/
-      font-size:18px;
-    }
+ 
     .darknav{
       background-color:rgba(0,0,0,0.9);
     }
@@ -146,7 +138,7 @@
 
   
 </nav>
-<marquee behavior=" " direction="right"><a href="<?php echo base_url() ?>index.php/Courses/register" style="color:white;">Click here to register into technical courses</a></marquee>
+<marquee behavior=" " direction="right"><a href="<?php echo base_url() ?>index.php/Courses/register" style="color:yellow;">Click here to register into <i>Technical courses</i></a></marquee>
 
 
 <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up" ></i></a>
