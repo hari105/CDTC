@@ -73,8 +73,8 @@ class Auth extends CI_Controller
 
                 $to=$user_email;
                 $subject = "CDTC email Verification";
-                $message = "Click on the following link to activate your account\n                      https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=".$vkey;
-
+                $message ="Click on the following link to activate your account:: ";
+                $message .= "https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=$vkey";
                 $headers = "From: sainathomdas@gmail.com" ;
                 $headers .= "MIME-Version:1.0". "\r\n";
                 $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
@@ -124,9 +124,9 @@ class Auth extends CI_Controller
             $user_vkey=$row->vkey;
             if((!strcmp($vkey, $user_vkey)))
             {
-             $update = $this->db->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey' LIMIT 1");
-             if($update)
-             {
+               $update = $this->db->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey' LIMIT 1");
+               if($update)
+               {
                 $this->session->set_flashdata('success','Your Account is Verified, Please Login now');
 
                 redirect('auth/login','refresh');
@@ -156,13 +156,13 @@ class Auth extends CI_Controller
 public function login()
 {
 
-   $this->load->view("login");
+ $this->load->view("login");
 
-   $this->form_validation->set_rules('rollNum', 'RollNum', 'trim|required');   
-   $this->form_validation->set_rules('password', 'password', 'required');
+ $this->form_validation->set_rules('rollNum', 'RollNum', 'trim|required');   
+ $this->form_validation->set_rules('password', 'password', 'required');
 
-   if( $this->form_validation->run() ==TRUE)
-   {
+ if( $this->form_validation->run() ==TRUE)
+ {
     $rollNum = $_POST['rollNum'];
     $password = md5($_POST['password']);
 
@@ -211,16 +211,16 @@ public function login()
                                 redirect('auth/login','refresh');
                             }
                         }
-                       
+                        
 
                     }
                     else{
-                       $this->session->set_flashdata('error','Incorrect Credentials');
+                     $this->session->set_flashdata('error','Incorrect Credentials');
 
-                       redirect('auth/login','refresh');
-                   }
-               }
-               else {  
+                     redirect('auth/login','refresh');
+                 }
+             }
+             else {  
                 $roll = $_POST['rollNum'];
                 $query=$this->db->query("SELECT createdDate from users where verified = 0 and rollNum='$roll' LIMIT 1");
                 $r=$query->row();
@@ -237,11 +237,11 @@ public function login()
 
 
         }
-         else{
-                    $this->session->set_flashdata('error', 'Incorrect password');
+        else{
+            $this->session->set_flashdata('error', 'Incorrect password');
                                                 //$_SESSION["error"] = "No account Found.";
-                                redirect('auth/login','refresh');
-            }
+            redirect('auth/login','refresh');
+        }
 
     }
 
