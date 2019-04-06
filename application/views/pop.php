@@ -60,6 +60,7 @@
     
     background: -webkit-linear-gradient(left, #5F9EA0, #00c6ff);
     padding : 50px;
+
     
     
 }
@@ -123,6 +124,11 @@ class="close" title="Close Modal">&times;</span>
         <h1>Register For the course</h1>
         <p>Center for Development of Technical Competencies (CDTC) offers many courses. Register and avail many advantages </p>
         
+    </div>
+    <div class="container" style="padding:10% 15% 0% 15%;">
+      <center>
+     <p style="color: black;">CDTC in collaboration with many industries offering finshing school courses to students of all branches.</p>
+     </center>
     </div>
    
     <div class="register-btn">
