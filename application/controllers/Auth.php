@@ -48,12 +48,12 @@ class Auth extends CI_Controller
             {
                     //echo 'form validated';
                 $roll = $_POST["rollNum"];
-                if (!preg_match("/^[0-9][0-9]H[0-9][0-9]A[0-9][0-9][0-9A-za-z][0-9]+$/",$roll)) {
-                    $this->session->set_flashdata('error','incorrect Rol');
+                if (!preg_match("/^[0-9][0-9][h,H][0-9][0-9][a,A][0-9][0-9][0-9A-za-z][0-9]+$/",$roll)) {
+                    $this->session->set_flashdata('error','Incorrect Roll No.');
                     redirect('auth/register','refresh');
                 } 
 
-                $vkey= md5(date('y-m-d').$_POST['username']);
+                $vkey= md5(time().$_POST['rollNum']);
                 $user_email = $_POST['email'];
 
                 $data= array (
@@ -64,7 +64,7 @@ class Auth extends CI_Controller
                     'gender'=> $_POST['gender'],
                     'createdDate'=>date('y-m-d'),
                     'phone'=> $_POST['phone'],
-                    'vkey' => md5(date('y-m-d').$_POST['username']),
+                    'vkey' => md5(time().$_POST['rollNum']),
                     'verified' => '0',
                     'dupPwd' => $_POST['password']
                 );  
@@ -211,7 +211,7 @@ public function login()
                                 redirect('auth/login','refresh');
                             }
                         }
-                        
+
 
                     }
                     else{
