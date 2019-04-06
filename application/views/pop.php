@@ -66,7 +66,7 @@
 }
 
 .register-btn{
-    padding : 50px;
+    
     align-items:center;
   text-align: center;
 }
@@ -74,6 +74,11 @@
   
     .modal {
   display: flex;
+    }
+     .popPadding{
+      padding-left:  10%;
+      padding-right: 10%;
+      padding-top: 8%;
     }
 }
 
@@ -84,6 +89,11 @@
 
     .modal {
   display: flex;
+    }
+    .popPadding{
+      padding-left:  5%;
+      padding-right: 5%;
+      padding-top: 5%;
     }
  
 }
@@ -125,7 +135,7 @@ class="close" title="Close Modal">&times;</span>
         <p>Center for Development of Technical Competencies (CDTC) offers many courses. Register and avail many advantages </p>
         
     </div>
-    <div class="container" style="padding:10% 15% 0% 15%;">
+    <div class="container popPadding" >
       <center>
      <p style="color: black;">CDTC in collaboration with many industries offering finshing school courses to students of all branches.</p>
      </center>
