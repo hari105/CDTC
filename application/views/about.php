@@ -161,9 +161,9 @@ ul{
             <h3><a href="#">Mr. Hari Prasad</a></h3>
             <p style="text-align:center;"> Professor</p>
             <ul class="follow-us clearfix">
-              <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
           </div>
       </li>
@@ -184,9 +184,9 @@ ul{
             <h3><a href="#">Sainath Omdas</a></h3>
             <p style="text-align:center;"> Web Developer <br> 16H61A0599</p>
             <ul class="follow-us clearfix">
-              <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href=" https://www.facebook.com/SainathOmdas" target="_blank"><i class="fab fa-facebook" aria-hidden="true" ></i></a></li>
+              <li><a href="https://twitter.com/SainathOmdas" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/sainathomdas/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
           </div>
       </li>
@@ -196,9 +196,9 @@ ul{
             <h3><a href="#">Manideep Pasuladi </a></h3>
              <p style="text-align:center;"> Web Developer <br> 16H61A0593</p> 
             <ul class="follow-us clearfix">
-              <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/manideep.leo03" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="https://twitter.com/ManideepLeo" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/manideep-pasuladi-593b0b130/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
           </div>
       </li>
@@ -208,9 +208,9 @@ ul{
             <h3><a href="#">Akhil Ganti </a></h3>
             <p style="text-align:center;"> Web Developer <br> 16H61A0578</p>
             <ul class="follow-us clearfix">
-              <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
           </div>
        </li>
