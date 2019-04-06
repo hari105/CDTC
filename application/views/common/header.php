@@ -23,15 +23,7 @@
   *{
     font-family: 'Philosopher', sans-serif;
   }
-  ul li  {
-    
-    padding: 10px 30px 10px 30px;
-    font-size: 14px;
-    }
-    li a{
-      /*text-transform: uppercase;*/
-      font-size:18px;
-    }
+ 
     .darknav{
       background-color:rgba(0,0,0,0.9);
     }
