@@ -143,7 +143,7 @@
   <a  href="https://anurag.edu.in/" target="_blank" title="AGI"><img class="rounded agiLogo" src="<?php //echo base_url('assets/images/agiLogo.jpg');?>" ></a>
 
 </nav>
-<marquee behavior=" " direction="right"><a href="<?php echo base_url() ?>index.php/Courses/register" style="color:white;">Click here to register into technical courses</a></marquee>
+<marquee behavior=" " direction="right"><a href="<?php echo base_url() ?>index.php/Courses/register" style="color:yellow;">Click here to register into <i>Technical courses</i></a></marquee>
 
 
 <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up" ></i></a>

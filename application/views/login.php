@@ -143,7 +143,7 @@
                 <div class="row">
                     <div class="col-md-3 register-left">
                     <a  href="<?php echo base_url() ?>index.php/Home"><img src="<?php echo base_url('assets/images/cdtc.jpeg'); ?>" class=" rounded"alt=""/></a>
-                        <h3>Welcome.</h3>
+                        <h3>Welcome!</h3>
                         
                     </div>
 
@@ -162,7 +162,7 @@
                                     <div class="col-md-12">
                                         <form action="" method="POST">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Roll Num *" name="rollNum" id="rollNum" required style="text-transform: uppercase;" />
+                                            <input type="text" class="form-control" placeholder="Roll Num *" name="rollNum" id="rollNum" required/>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control" placeholder="Password *" name="password" id="password "   required />

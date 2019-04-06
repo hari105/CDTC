@@ -130,7 +130,7 @@
                 <div class="row">
                     <div class="col-md-3 register-left">
                     <a href="<?php echo base_url() ?>index.php/Home"><img src="<?php echo base_url('assets/images/cdtc.jpeg'); ?>" class="rounded" alt=""/></a>
-                        <h3>Welcome.</h3>
+                        <h3>Welcome!</h3>
                         
                     </div>
                     <div class="col-md-9 register-right">
@@ -150,12 +150,12 @@
                                     <form action="" method="POST">
                                     <div class="form-group">
                                        
-                                       <input type="text" class="form-control" placeholder="Roll No. *" name="rollNum" id="rollNum"  required style="text-transform: uppercase;" />
+                                       <input type="text" class="form-control" placeholder="Roll No. *" name="rollNum" id="rollNum"  required/>
                                        <?php echo form_error('password','<span class="help-block">','</span>'); ?>
                                    </div>
                                         <div class="form-group">
                                        
-                                            <input type="text" class="form-control" placeholder="UserName *" name="username" id="username"  required style="text-transform: capitalize;" />
+                                            <input type="text" class="form-control" placeholder="UserName *" name="username" id="username"  required />
                                             <?php echo form_error('password','<span class="help-block">','</span>'); ?>
                                         </div>
                                      

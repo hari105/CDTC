@@ -137,13 +137,6 @@
 <img src="http://anurag.edu.in/wp-content/uploads/hacktaon-.jpg" alt="hacktaon" width="95%" height="241" class="alignnone size-full wp-image-22839" srcset="https://anurag.edu.in/wp-content/uploads/hacktaon-.jpg 520w, https://anurag.edu.in/wp-content/uploads/hacktaon--300x139.jpg 300w" sizes="(max-width: 520px) 100vw, 520px" />
 </div>
 
-
-
-<form action="http://localhost/CDTC_1/index.php/RegistrationFormController/showForm" method="POST"">
-<center>
-  <input type="hidden" name="android">
-<button class="btn btn-success">Join Club</button>
-</center>
 <br>
 
 
