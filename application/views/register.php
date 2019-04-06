@@ -189,7 +189,7 @@
                                             </select>
                                         </div>
                                         
-                                        <button class="btn btnRegister" name="register" >Register</button>
+                                        <button class="btn btnRegister btn-info" name="register" >Register</button>
                                     </div>
                                     </form>
                                     <p>Already registered? <a href="<?php echo base_url() ?>index.php/auth/login">Login now</a></p>
