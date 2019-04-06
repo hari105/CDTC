@@ -61,6 +61,36 @@ class Courses extends CI_Controller
 					$res = $this->Coursesmodel->enroll(array('htno' => $htno, 'courseID' => $courseID));
 					if($res){
 						$this->session->set_flashdata('enrollmentSuccess','<div class="alert alert-success">You have been registered successfully!</div>');
+
+
+            $this->db->select('*');
+            $this->db->from('users');
+            $this->db->where(array('rollNum'=>$htno));
+            $query = $this->db->get();
+            $result = $query->row();
+            $email = $result -> email;
+
+               $this->db->select('*');
+            $this->db->from('courses');
+            $this->db->where(array('courseID'=>$courseID));
+            $q = $this->db->get();
+            $r = $q->row();
+            $courseName = $r -> courseName;
+
+
+                        $to=$email;
+                        $subject = "CDTC Course Enrollment";
+                       $message = "Thank you for getting registered into \"$courseName.\"";
+                        
+                        $headers = "From: sainathomdas@gmail.com" ;
+                        $headers .= "MIME-Version:1.0". "\r\n";
+                        $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
+
+                        mail($to,$subject,$message,$headers);
+
+
+
+
 							redirect('Courses/register','refresh');
 					}
 					else{
