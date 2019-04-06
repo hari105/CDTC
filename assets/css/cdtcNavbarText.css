@@ -2,11 +2,15 @@
 	.cdtcText{
 		display: block;
 	}
- }
+ 
+
+}
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
 	.cdtcText{
 		display: block;
 	}
+
+  
 }
 @media (min-width:640px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 .cdtcText{
@@ -49,6 +53,15 @@
 .cdtcText{
 		display: none;
 	} 
+  ul li  {
+    
+    padding: 15px 30px 15px 30px;
+    font-size: 14px;
+    }
+    li a{
+      /*text-transform: uppercase;*/
+      font-size:18px;
+    }
  }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ 
 .cdtcText{

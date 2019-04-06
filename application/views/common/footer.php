@@ -75,11 +75,10 @@ ul, ol {
       <footer class="section footer-classic context-dark bg-image " style="background: rgba(14, 56, 101, 0.9); padding-left: 4%;">
       <div class="row justify-content-center">
             
-      <div class="col-md-3 col-xl-1 float-right" >
-      </div>
+     
       <div class="col-md-3 col-xl-2 float-right" >
 			<br>
-      <a  href="https://anurag.edu.in/" target="_blank" title="AGI"><img class="rounded float-left agilogo" src="<?php echo base_url('assets/images/agiLogo.JPG');?>" ></a>
+      <a  href="https://anurag.edu.in/" target="_blank" title="AGI"><img style="padding-top: 4%;" class="rounded float-left agilogo" src="<?php echo base_url('assets/images/agiLogo.JPG');?>"></a>
      
     </div>
             <div class="col-md-3 col-xl-3 padding">
@@ -128,7 +127,7 @@ Telangana, INDIA - 500 088 </dd>
 $('.closeMenu').on('click', function(){
      $(".navbar-toggler").click();
 });
-</script>s
+</script>
   <!-- SCRIPTS -->
 
   </body>

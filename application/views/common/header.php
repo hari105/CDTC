@@ -60,7 +60,7 @@
   <h3><i><b>Center for Development of Technical Competencies</b></i></h3>
 </div> 
 <nav class="navbar navbar-expand-sm navbar-inverse navbar-light bg-light justify-content-center sticky-top " id="navbarlinks">
-  <a class="navbar-brand" href="<?php echo base_url() ?>index.php/Home"  title="AGI"><img class="rounded cdtcLogo" src="<?php //echo base_url('assets/images/cdtc.jpeg');?>"></a>
+
   <a class="navbar-brand cdtcText" href="<?php echo base_url() ?>index.php/Home"><b>CDTC</b></a>
 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon ml-auto"></span>
@@ -72,7 +72,7 @@
     <ul class="navbar-nav mx-auto text-center">
 
       <li class="nav-item active  cool-link">
-        <a class="nav-link py-0" href="<?php echo base_url() ?>index.php/Home">Home <span class="sr-only">(current)</span></a>
+        <a  class="nav-link py-0" href="<?php echo base_url() ?>index.php/Home" >Home <span class="sr-only">(current)</span></a>
       </li>
      
       <li class="nav-item dropdown active cool-link">
