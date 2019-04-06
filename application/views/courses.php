@@ -256,7 +256,7 @@ physical world and the cyber space.
                             <a>Outcome :</a>
                         </div>
                         <div class="card-text">
-                        Students are able to develop a responsive static web pages.
+                        Students will be able to develop a responsive static web pages.
                         </div>
                     </div>
                     <div class="card-footer">
@@ -275,7 +275,7 @@ physical world and the cyber space.
                             <a>Outcome :</a>
                         </div>
                         <div class="card-text">
-                        Students are able to develop a dynamic web pages.
+                        Students will be able to develop a dynamic web pages.
                         </div>
                     </div>
                     <div class="card-footer">

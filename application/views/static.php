@@ -24,7 +24,7 @@ ul li , ol li{
 
         <h2>Outcome:</h2>
         <ul style="list-style-type:square; " >
-            <li>Students are able to develop a responsive static web pages</li>
+            <li>Students will be able to develop a responsive static web pages</li>
             
         </ul>
 <br>
