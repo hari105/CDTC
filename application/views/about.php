@@ -1,5 +1,5 @@
 
-c<?php $this->load->view('common/header.php') ?> 
+<?php $this->load->view('common/header.php') ?> 
 <style>
 .row.heading h2 {
     color: #fff;
