@@ -8,7 +8,7 @@
 }
 #mainImage{
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .sec1{
   position: relative;

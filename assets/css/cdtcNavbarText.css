@@ -12,6 +12,11 @@
 .cdtcText{
 		display: block;
 	}}
+	@media (min-width:700px)  { 
+.cdtcText{
+		display: none;
+	}
+}
 
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
 .cdtcText{
