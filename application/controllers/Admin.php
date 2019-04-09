@@ -34,6 +34,12 @@ class Admin extends CI_Controller
 
 	function adminProfile()
 	{
+
+		if(!isset($_SESSION['admin']))
+		{
+			$this->session->set_flashdata('adminLoginFailed','<div class="alert alert-danger">Please Login!</div>');
+			redirect('Admin','refresh');
+		}
 		$this->load->model('Coursesmodel');
 		$this->load->view('common/header');
 		$this->data['c101'] = $this->Coursesmodel->getRegisteredStudents('101');
@@ -57,6 +63,7 @@ class Admin extends CI_Controller
 		$this->load->view('common/footer.php');
 		
 	}
+
 
 }
 
