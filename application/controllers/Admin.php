@@ -13,12 +13,12 @@ class Admin extends CI_Controller
 	function adminLogin()
 	{
 		$this->load->database();
-		$this->load->model('AuthModel');
+		$this->load->model('Authmodel');
 
 		$adminUserName = $_POST['adminUserName'];
 		$adminPassword = $_POST['adminPassword'];
 
-		$res = $this->AuthModel->adminLogin(array('adminUserName' => $adminUserName,'adminPassword' => $adminPassword ));
+		$res = $this->Authmodel->adminLogin(array('adminUserName' => $adminUserName,'adminPassword' => $adminPassword ));
 		if ($res) {
 			$this->session->set_flashdata('adminLoginSuccess','<div class="alert alert-success">Login Success!</div>');
 			$_SESSION['admin'] = TRUE;

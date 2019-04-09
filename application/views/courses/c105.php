@@ -8,7 +8,7 @@
         $studentCount = 1;
         ?>
         <table class="table table-striped table-bordered container">
-          <tr><td><strong>S.No</strong></td><td><strong>Student HtNo.</strong></td><td>Enrolled on:(yyyy-mm-dd)</td></tr>
+          <tr><td><strong>S.No</strong></td><td><strong>Student HtNo.</strong></td><td><b>Enrolled on:(yyyy-mm-dd)</b></td></tr>
           <?php foreach($c105 as $c){     //change for new course
             echo '<tr><td>'.$studentCount.'</td><td>'.$c->rollNum.'</td><td>'.$c->enrolledDate.'</td></tr>';
             $studentCount += 1;
