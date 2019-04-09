@@ -150,7 +150,7 @@
                     <div class="col-md-9 register-right">
                     <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Login</h3>
+                                <h3 class="register-heading">Student Login</h3>
                                 <?php if(isset($_SESSION['success'])) { ?>
                                         <div class="alert alert-success"><?php echo $_SESSION['success']; ?></div>
                                     <?php
@@ -166,6 +166,10 @@
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control" placeholder="Password *" name="password" id="password "   required />
+                                        </div>
+                                         <div style="float: left;color: #5F9EA0;font-size: 14px;margin-left: 8%;">
+                                        <a href="<?php echo site_url('Admin') ?>">Login as Admin</a>
+
                                         </div>
                                         <div style="float: right;color: #5F9EA0;font-size: 14px;margin-right:8%;">
                                         <a href="<?php echo site_url('Forgot') ?>">Forgot Password*</a>

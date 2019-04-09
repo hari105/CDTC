@@ -125,6 +125,21 @@
 
       
               } 
+
+              elseif (isset($_SESSION['admin'])) {
+                echo   '<li class="nav-item dropdown active cool-link">
+                            <a class="nav-link dropdown-toggle username py-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.
+                                   $_SESSION['adminUserName'].' 
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="'.base_url().'index.php/admin/adminProfile">Registered Students</a>
+                              
+                              <a class="dropdown-item" href="'. base_url().'index.php/auth/logout ">Logout</a>
+                            </div>
+                          </li>';
+              }
+
+
               else 
               {
              echo        '<!-- from here -->

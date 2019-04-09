@@ -224,7 +224,6 @@ public function login()
                             }
                             else {
                                 $this->session->set_flashdata('error', 'InCorrect password');
-                                                //$_SESSION["error"] = "No account Found.";
                                 redirect('auth/login','refresh');
                             }
                         }
