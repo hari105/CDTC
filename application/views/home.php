@@ -32,8 +32,7 @@
     <p>
         <b>Center for Development of Technical Competencies (CDTC) </b>  <br>
         To bridge the gap between the needs of the industry and the academic
-        curricula Department of Computer Science and Engineering (CSE), Anurag Group of Institution
-        , Hyderabad in collaboration with industry introduces finishing school for students of all branches.
+        curricula Department of Computer Science and Engineering (CSE), Anurag Group of Institutions, Hyderabad in collaboration with industry introduces finishing school for students of all branches.
     </p>
     <p>
     Through Finishing School, the students of various departments will get an opportunity to acquire and 
