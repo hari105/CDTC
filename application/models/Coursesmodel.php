@@ -7,7 +7,10 @@ public function __construct()
 
 function getCourses()
     {
+        //sainath
+        $this->db->reconnect();
         $this->load->database();
+
         $this->db->select("*");
         $this->db->from('courses');
         $query = $this->db->get();
@@ -16,6 +19,8 @@ function getCourses()
 
     function checkStatus($data)
     {
+//sainath
+        $this->db->reconnect();
          $query = $this->db->get_where('register', array(//making selection
              'rollNum' => $data['htno'],
              'courseID'=>$data['courseID']
@@ -28,6 +33,7 @@ function getCourses()
 
     function enroll($data)
     {
+
         $d = array ('rollNum'=> $data['htno'],
                     'courseID'=> $data['courseID'],
                     'enrolledDate'=>date('y-m-d'));
@@ -40,6 +46,9 @@ function getCourses()
     function enrolledCourses(){
         $query= NULL;  
         $roll=  $_SESSION['rollNum'];
+        
+//sainath
+        $this->db->reconnect();
         $this->load->database();
         $this->db->select("courses.courseName");
         $this->db->from(array('courses'));

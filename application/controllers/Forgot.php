@@ -9,7 +9,9 @@ class Forgot extends CI_Controller
 		            {
 		            	$this->load->database();
 		            	$htno = $_POST['htno'];
-            
+ 
+    //sainath
+    $this->db->reconnect();
             
             $this->db->select('*');
             $this->db->from('users');

@@ -42,7 +42,8 @@ class Courses extends CI_Controller
 		$courseID = $_POST['courseID'];
 		$password = $_POST['password'];
 
-
+    //sainath
+    $this->db->reconnect();
 		$this->db->select('*');
 		$this->db->from('users');
 		$this->db->where(array('rollNum'=>$htno));

@@ -27,6 +27,9 @@ class Auth extends CI_Controller
     {
         //view
         /*load database libray manually*/
+
+    //sainath
+    $this->db->reconnect();
         $this->load->database();
         $this->load->library('session');
         $this->load->library('email');
@@ -93,10 +96,8 @@ class Auth extends CI_Controller
             }
             else
             {
-                $this->session->set_flashdata('error','Something Went Wrong');
+                $this->session->set_flashdata('error','User already exists!');
 
-
-                    //$this->session->set_flashdata('success','Your account has been registered');
                 
                 redirect('auth/register','refresh');
 
@@ -119,6 +120,10 @@ class Auth extends CI_Controller
     {
         if(isset($_GET['vkey'])) {
             $vkey= $_GET['vkey'];
+
+    //sainath
+    $this->db->reconnect();
+
             $que=$this->db->query("SELECT verified,vkey from users where verified = 0 and vkey='$vkey' LIMIT 1");
             $row=$que->row();
             if($row)
@@ -174,6 +179,9 @@ public function login()
    {
     $rollNum = $_POST['rollNum'];
     $password = md5($_POST['password']);
+
+    //sainath
+    $this->db->reconnect();
 
     $this->db->select('*');
     $this->db->from('users');

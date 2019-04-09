@@ -8,6 +8,9 @@ public function __construct()
 
     function getUser()
     {
+
+//sainath
+        $this->db->reconnect();
         $username = $_SESSION['username'];
         $this->load->database();
         $this->db->select("rollNum");
@@ -19,6 +22,9 @@ public function __construct()
     }
     function enrolledCourses()
     {
+        
+//sainath
+        $this->db->reconnect();
         $query= NULL;  
         $roll=  $_SESSION['rollNum'];
         $this->load->database();
