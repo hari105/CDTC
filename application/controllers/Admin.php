@@ -64,6 +64,52 @@ class Admin extends CI_Controller
 		
 	}
 
+	function editStudent($htno=0,$cid=0)	//htno and courseID are from url
+	{
+		
+		$this->load->model('Usermodel');
+		$this->data['details'] = $this->Usermodel->getStudentDetails($htno);
+		$this->load->view('editStudent',$this->data);
+
+	}
+
+	function updateStudentDetails()
+	{
+		$htno = $_POST['htno'];
+		$studentName = $_POST['studentName'];
+		$studentEmail = $_POST['studentEmail'];
+
+		$this->load->model('Usermodel');
+		$res = $this->Usermodel->updateStudent($htno,$studentName,$studentEmail);
+		if($res){
+			$this->session->set_flashdata('errorInUpdation','<div class="alert alert-success">Successfully Updated!</div>');
+			redirect('Admin/adminProfile','refresh');
+		}
+		else{
+			$this->session->set_flashdata('errorInUpdation','<div class="alert alert-danger">An unknown error occured!</div>');
+			redirect('Admin/editStudent','refresh');
+		}
+	}
+
+	function disenrollStudent($htno=0,$cid=0)
+	{
+		$this->load->model('Usermodel');
+		$res = $this->Usermodel->disenrollStudent($htno,$cid);
+		if($res){
+		redirect('Admin/adminProfile','refresh');
+		
+		$this->session->set_flashdata('errorInDisenrolling','<div class="alert alert-success">Student has been disenrolled!</div>');
+		redirect('Admin/adminProfile','refresh');
+		}
+
+		else{
+			
+			$this->session->set_flashdata('errorInDisenrolling','<div class="alert alert-danger">An unknown error occured.Please try after sometime!</div>');
+			redirect('Admin/adminProfile','refresh');
+
+		}
+	}
+
 
 }
 

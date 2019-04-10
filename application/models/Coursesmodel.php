@@ -34,6 +34,10 @@ class Coursesmodel extends CI_Model {
     function enroll($data)
     {
 
+
+        
+
+        date_default_timezone_set('Asia/Kolkata');
         $d = array ('rollNum'=> $data['htno'],
             'courseID'=> $data['courseID'],
             'enrolledDate'=>date('y-m-d'));
@@ -65,8 +69,8 @@ class Coursesmodel extends CI_Model {
        $this->load->database();
        
 
-       $this->db->select("register.rollNum,register.enrolledDate");
-       $this->db->from(array('register'));
+       $this->db->select("register.rollNum,register.enrolledDate,users.username");
+       $this->db->from(array('register','users'));
        $this->db->where(array('register.courseID'=>$cid ));
        $this->db->join('courses','courses.courseID=register.courseID');
        $query = $this->db->get();
