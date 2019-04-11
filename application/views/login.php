@@ -163,6 +163,7 @@
                                         <form action="" method="POST">
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Roll Num *" name="rollNum" id="rollNum" required/>
+                                            
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control" placeholder="Password *" name="password" id="password "   required />

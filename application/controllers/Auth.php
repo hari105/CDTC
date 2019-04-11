@@ -76,9 +76,8 @@ class Auth extends CI_Controller
 
                 $to=$user_email;
                 $subject = "CDTC email Verification";
-                $message ="Click on the following link to activate your account:: ";
-                $message .= "https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=$vkey";
-                $headers = "From: sainathomdas@gmail.com" ;
+                $message = '<a href="https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey='.$vkey.'">Click here</a> to activate your account';
+                 $headers = "From: sainathomdas@gmail.com" ;
                 $headers .= "MIME-Version:1.0". "\r\n";
                 $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
 
@@ -203,7 +202,7 @@ public function login()
 
                 if($verified) {
 
-                    $_SESSION["success"] = "You're logged in";
+                    $_SESSION["success"] = "";
                     $_SESSION['user-logged'] = TRUE ;
                     $_SESSION['username'] = $user->username;
                     $_SESSION['rollNum'] = $user->rollNum;
@@ -214,7 +213,7 @@ public function login()
                     // $this->session->set_flashdata('success','YOure logged in' );
                             if( $password === $user->password) 
                             {
-                                $_SESSION["success"] = "You're logged in";
+                                $_SESSION["success"] = " ";
                                 $_SESSION['user-logged'] = TRUE ;
                                 $_SESSION['username'] = $user->username;
                                 $_SESSION['rollNum'] = $user->rollNum;

@@ -121,7 +121,7 @@
   
        <!-- nav bar -->
  <center>
-  <a href="<?php echo base_url() ?>index.php/Home"><img src="<?php echo base_url('assets/images/cdtc.jpeg'); ?>" class="loginlogo" alt=""/></a>
+  <a href="<?php echo base_url() ?>index.php/Home"><img src="<?php echo base_url('assets/images/cdtc.jpeg'); ?>" class="loginlogo" alt="" title="Home"/></a>
  </center>
 
 
@@ -129,7 +129,7 @@
             <div class="container register rounded">
                 <div class="row">
                     <div class="col-md-3 register-left">
-                    <a href="<?php echo base_url() ?>index.php/Home"><img src="<?php echo base_url('assets/images/cdtc.jpeg'); ?>" class="rounded" alt=""/></a>
+                    <a href="<?php echo base_url() ?>index.php/Home"><img src="<?php echo base_url('assets/images/cdtc.jpeg'); ?>" class="rounded" alt="" title="Home"/></a>
                         <h3>Welcome!</h3>
                         
                     </div>
@@ -151,6 +151,7 @@
                                     <div class="form-group">
                                        
                                        <input type="text" class="form-control" placeholder="Roll No. *" name="rollNum" id="rollNum"  required/>
+                                       <span style="font-size: 12px;color:teal;margin-left: 2%;">Roll number can't be modified later.</span>
                                        <?php echo form_error('password','<span class="help-block">','</span>'); ?>
                                    </div>
                                         <div class="form-group">

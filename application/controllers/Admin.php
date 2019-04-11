@@ -127,7 +127,7 @@ class Admin extends CI_Controller
 		$object->getActiveSheet()->getColumnDimension('D')->setWidth(20);
 		$object->getActiveSheet()->getColumnDimension('E')->setWidth(10);
 		$object->getActiveSheet()->getColumnDimension('F')->setWidth(50);
-		$object->getActiveSheet()->getStyle("A1:F1")->getFont()->setBold( true );
+		$object->getActiveSheet()->getStyle("A1:F1")->getFont()->setBold(true);
 
 
 		$crs = $this->Coursesmodel->getCourses();
@@ -157,9 +157,10 @@ class Admin extends CI_Controller
 
 
 
-		$object_writer = PHPExcel_IOFactory::createWriter($object, 'Excel5');
-		header('Content-Type: application/vnd.ms-excel');
-		header('Content-Disposition: attachment;filename="Registered Students.xls"');
+		$object_writer = PHPExcel_IOFactory::createWriter($object, 'Excel2007');
+		header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		header('Content-Disposition: attachment;filename="Registered_Students.xlsx"');
+		header('Cache-Control: max-age=0');
 		$object_writer->save('php://output');
 	}
 }
