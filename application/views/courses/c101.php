@@ -58,7 +58,7 @@
 </style>
 
 <div class="container">
-  <a class="btn-success btn" style="float:right;" href="<?php echo site_url('Admin/downloadExcel')?>">Export</a>  
+  <a class="btn-success btn" style="float:right;" href="<?php echo site_url('Admin/downloadExcel') ?>">Export</a>
 </div>
 
 
@@ -67,7 +67,7 @@
   <div class="container courseBox">
     <h3 style="color: orange;">Basics of mobile app development :
     </h3>
-    
+
 
     <div>
 
@@ -97,7 +97,7 @@
           ?>
         </table>
 
-        
+
 
       <?php
     } else { ?>

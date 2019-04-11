@@ -137,7 +137,7 @@ class="close" title="Close Modal">&times;</span>
     </div>
     <div class="container popPadding" >
       <center>
-     <p style="color: black;">CDTC in collaboration with many industries offering finshing school courses to students of all branches.</p>
+     <p style="color: black;">CDTC in collaboration with many industries offering finshing school courses to the students of all branches.</p>
      </center>
     </div>
    
