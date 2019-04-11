@@ -5,9 +5,7 @@
   height: 10px;
   border-radius: 100%;
 }
-*{
-  color: white;
-}
+
 </style>
 
 
