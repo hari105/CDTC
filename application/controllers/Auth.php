@@ -73,7 +73,7 @@ class Auth extends CI_Controller
 
                 $this->db->insert('users', $data);
 
-              
+                require_once('PHPMailer/PHPMailerAutoload.php');
                 $mail = new PHPMailer;
                 $mail->isSMTP();
                 $mail->Host = "smtp.gmail.com";
@@ -85,7 +85,7 @@ class Auth extends CI_Controller
                 $mail->setFrom('dummysainath@gmail.com', 'CDTC-AGI');
                 $mail->addAddress($user_email);
                 $mail->isHTML(true);
-                $mail->Subject = 'PHPMailer Checking';
+                $mail->Subject = 'CDTC Email verification';
                 $mail->Body = '<a href="https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=' . $vkey . '">Click here</a> to activate your account';
 
 

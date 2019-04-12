@@ -72,7 +72,7 @@ class Courses extends CI_Controller
 					$r = $q->row();
 					$courseName = $r->courseName;
 
-
+					require_once('PHPMailer/PHPMailerAutoload.php');
 					$mail = new PHPMailer;
 					$mail->isSMTP();
 					$mail->Host = "smtp.gmail.com";
@@ -84,8 +84,8 @@ class Courses extends CI_Controller
 					$mail->setFrom('dummysainath@gmail.com', 'CDTC-AGI');
 					$mail->addAddress($email);
 					$mail->isHTML(true);
-					$mail->Subject = 'PHPMailer Checking';
-					$mail->Body = 'Thank you for getting enrolled into ' . $courseName;
+					$mail->Subject = 'CDTC Course Enrollment';
+					$mail->Body = 'Thank you for getting enrolled into "' . $courseName.'"';
 
 					$mail->send();
 
