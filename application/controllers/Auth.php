@@ -73,14 +73,25 @@ class Auth extends CI_Controller
 
                 $this->db->insert('users', $data);
 
-                $to = $user_email;
-                $subject = "CDTC email Verification";
-                $message = '<a href="https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=' . $vkey . '">Click here</a> to activate your account';
-                $headers = "From: sainathomdas@gmail.com";
-                $headers .= "MIME-Version:1.0" . "\r\n";
-                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+              
+                $mail = new PHPMailer;
+                $mail->isSMTP();
+                $mail->Host = "smtp.gmail.com";
+                $mail->Port = 587;
+                $mail->SMTPAuth = true;
+                $mail->SMTPSecure = 'tls';
+                $mail->Username = 'dummysainath@gmail.com';
+                $mail->Password = 'trend123';
+                $mail->setFrom('dummysainath@gmail.com', 'CDTC-AGI');
+                $mail->addAddress($user_email);
+                $mail->isHTML(true);
+                $mail->Subject = 'PHPMailer Checking';
+                $mail->Body = '<a href="https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=' . $vkey . '">Click here</a> to activate your account';
+
+
+                
                 //sending mail
-                if (mail($to, $subject, $message, $headers)) {
+                if ($mail->send()) {
                     $this->session->set_flashdata('success', 'Thank you for registration. We have sent you a verification link.');
                     //$_SESSION["succes"] = "Your account has been registerd";
                     redirect('auth/register', 'refresh');
