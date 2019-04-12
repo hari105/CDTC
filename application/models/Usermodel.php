@@ -47,7 +47,7 @@ class Usermodel extends CI_Model
     }
 
 
-    function updateStudent($htno,$studentName,$studentEmail)
+    function updateStudent($htno,$studentName,$studentEmail)    //by admin
     {
         //sainath
         $this->db->reconnect();
@@ -69,5 +69,52 @@ class Usermodel extends CI_Model
         if($this->db->query($sql))
             return TRUE;
         return FALSE;
+    }
+
+
+    function updateStudentDetails($htno,$studName,$phone){  //by student
+        $this->db->reconnect();
+        $this->load->database();
+
+        $data = array(
+            'username' => $studName,
+            'phone' => $phone
+    );
+    
+    $this->db->where('rollNum', $htno);
+    if($this->db->update('users', $data))
+        return TRUE;
+    return FALSE;
+    }
+
+    function updateStudentemail($htno,$email,$vkey){      //by student
+        $this->db->reconnect();
+        $this->load->database();
+
+        $data = array(
+            'email' => $email,
+            'verified' => 0,
+            'vkey' => $vkey
+    );
+    
+    $this->db->where('rollNum', $htno);
+    if($this->db->update('users', $data))
+        return TRUE;
+    return FALSE;
+    }
+
+    function updateStudentPassword($htno, $confoPassword){
+        $this->db->reconnect();
+        $this->load->database();
+
+        $data = array(
+            'password' => md5($confoPassword),
+            'dupPwd' => $confoPassword
+    );
+    
+    $this->db->where('rollNum', $htno);
+    if($this->db->update('users', $data))
+        return TRUE;
+    return FALSE;
     }
 }

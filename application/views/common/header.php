@@ -114,7 +114,8 @@
                                    $_SESSION['username'].' 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <a class="dropdown-item" href="'.base_url().'index.php/user/profile">Profile</a>
+                            <a class="dropdown-item" href="'.base_url().'index.php/user/studentProfile">Profile</a>
+                              <a class="dropdown-item" href="'.base_url().'index.php/user/registeredCourses">Registered Courses</a>
                               
                               <a class="dropdown-item" href="'. base_url().'index.php/auth/logout ">Logout</a>
                             </div>

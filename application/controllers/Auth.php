@@ -93,7 +93,7 @@ class Auth extends CI_Controller
             }
         }
         if (isset($_SESSION['user-logged'])) {
-            redirect('user/profile', 'refresh');
+            redirect('user/registeredCourses', 'refresh');
         }
         $this->load->view("register");
     }
@@ -187,7 +187,7 @@ class Auth extends CI_Controller
                                         $_SESSION['rollNum'] = $user->rollNum;
 
 
-                                        redirect('user/profile', 'refresh');
+                                        redirect('user/registeredCourses', 'refresh');
                                     } else {
                                         $this->session->set_flashdata('error', 'InCorrect password');
                                         redirect('auth/login', 'refresh');
@@ -200,16 +200,16 @@ class Auth extends CI_Controller
                             }
                         } else {
                             $roll = $_POST['rollNum'];
-                            $query = $this->db->query("SELECT createdDate from users where verified = 0 and rollNum='$roll' LIMIT 1");
+                            $query = $this->db->query("SELECT email from users where verified = 0 and rollNum='$roll' LIMIT 1");
                             $r = $query->row();
-                            $this->session->set_flashdata('error', 'Your Account is not Verified Yet.Please click on the link which was sent to your mail on ' . $r->createdDate . ' (yy-mm-dd)');
+                            $this->session->set_flashdata('error', 'Your Account is not Verified Yet.Please click on the link which was sent to ' . $r->email );
 
                             redirect('auth/login', 'refresh');
                         }
 
 
                         if (isset($_SESSION['user-logged'])) {
-                            redirect('user/profile', 'refresh');
+                            redirect('user/registeredCourses', 'refresh');
                         }
                     } else {
                         $this->session->set_flashdata('error', 'Incorrect password');
