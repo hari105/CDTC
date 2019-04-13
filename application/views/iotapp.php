@@ -7,7 +7,7 @@ ul li , ol li{
 
 <div class="container course rounded">
         <div class="courseName">   <h1>Course Name : </h1> <h4>Introduction to Internet of Things(IoT) : Its Applications  </h4>
-        <h5>IoT Club </h5>
+        <h5 style="color:yellow;">IoT Club </h5>
         </div>
  
         <a href="<?php echo base_url() ?>index.php/Courses/register" class="btn btn-lg btn-success" value="Register" style="float:right;" >Register</a>
@@ -34,8 +34,7 @@ ul li , ol li{
 Communication Protocols, Overview of IoT Platforms, IoT
 Architecture.
 </li>
-            <li><b>Cloud Computing & Big data</b>: Types of Sensors, Hands on basic sensors with Arduino,
-Hands on basic sensors with Raspberry Pi 3
+            <li><b>Cloud Computing & Big data</b>: Types of Sensors, Hands on basic sensors with Arduino and Raspberry Pi 3.
 </li>
 <li><b>Security</b>: Hardware Security , Network Security, Cloud Security
 </li>
@@ -48,13 +47,13 @@ Hands on basic sensors with Raspberry Pi 3
         <h2>Duration :  </h2> <p>12 Hours</p>
 <br>
 
-        <h2>Course Coordinator :  </h2> <p> G Balram, Asst. Prof. Dept. Of CSE</p>
+        <h2>Course Coordinator :  </h2> <p> G Balram, Asst. Prof. Dept. of CSE</p>
 <br>
 
         <h2>Instructors : </h2>
         <ol type="1">
             <li>Uthej Kumar , IV B.Tech CSE</li>
-            <li>G Balram, Asst. Prof. Dept. Of CSE</li>
+            <li>G Balram, Asst. Prof. Dept. of CSE</li>
         </ol>
 <br>
         <h2>Industry Partner: </h2> <p>Idea Labs</p>

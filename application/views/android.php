@@ -16,6 +16,7 @@
 <p align="justify" style="font-family: 'Philosopher', sans-serif;">Anurag Android Club (AAC) was initiated with the motto of developing mobile applications on Android technology for the common people needs in daily life. The event was enlightened by the presence of several respected personalities &#8211; Mr.Anirbanpal, Technologies Expert, Tech Mahindra, Dr. V. Vijaya Kumar, Professor and Dean, and Dr. G. Vishnu Moorthy, Professor and Head, Dept of CSE.</p>
 
 <br>
+<!--
 <div class="container">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -44,6 +45,7 @@
   </a>
 </div>
 </div>
+-->
 <br>
 <h4>The executive body of AAC for the academic year 2015-2016 is as follows:</h4>
 <table class="table" style="padding: 20px;">

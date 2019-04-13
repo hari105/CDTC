@@ -6,7 +6,8 @@ ul li , ol li{
 </style>
 
 <div class="container course rounded">
-        <div class="courseName "><h1>Course Name : </h1> <h4>Static web design </h4> <h5>Web Club </h5> </div>
+        <div class="courseName "><h1>Course Name : </h1> <h4>Static web design </h4> 
+        <h5 style="color:yellow;">Web Club </h5> </div>
     
     
 
@@ -18,13 +19,13 @@ ul li , ol li{
         <h2>Objective:</h2>
         <ul style="list-style-type:square; " >
             <li>Understand variety of tools and technologies.</li>
-            <li>Learn techniques of responsive web design</li>
+            <li>Learn techniques of responsive web design.</li>
         </ul>
 <br>
 
         <h2>Outcome:</h2>
         <ul style="list-style-type:square; " >
-            <li>Students will be able to develop a responsive static web pages</li>
+            <li>Students will be able to develop a responsive static web pages.</li>
             
         </ul>
 <br>
@@ -33,12 +34,12 @@ ul li , ol li{
              <ul style="list-style-type:square; " >
             <li><b>Introduction to Web Technologies</b> : How the Website Works?,
 Types of Websites (Static and Dynamic Websites), Client and Server
-Scripting
+Scripting.
 </li>
             <li><b>Hypertext Markup Language( HTML)</b>: What is Markup Language,
 Basic Structure of HTML, Header , Paragraph, Span, Pre ,Anchor
 Links and Named Anchors, Image ,Table
-,lists,forms,div,spam,frame,iframes,HTML5
+,lists,forms,div,spam,frame,iframes,HTML5.
 </li>
 <li><b>Cascading Style Sheets (CSS)</b>: Introduction to Cascading Style
 Sheets ,Types of CSS ,CSS Selectors, CSS Properties: Type

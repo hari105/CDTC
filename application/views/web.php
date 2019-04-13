@@ -19,11 +19,11 @@
 <br>
 <div class="container">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
+ <!-- <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> 
+  </ol> -->
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img style="height: 600px;" class="d-block w-100 img-fluid" src="<?php echo base_url('assets/images/web/spicode_aniruth.jpeg');?>"  >
@@ -34,12 +34,7 @@
         </center>
       </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Yarra_Night_Panorama%2C_Melbourne_-_Feb_2005.jpg" alt="Second slide" >
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Yarra_Night_Panorama%2C_Melbourne_-_Feb_2005.jpg" alt="Third slide">
-    </div>
+  
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -86,13 +86,15 @@ class Auth extends CI_Controller
                 $mail->addAddress($user_email);
                 $mail->isHTML(true);
                 $mail->Subject = 'CDTC Email verification';
-                $mail->Body = '<a href="https://cdtccvsr.000webhostapp.com/index.php/Auth/Verify?vkey=' . $vkey . '">Click here</a> to activate your account';
+                $mail->Body = '<a href="'.base_url().'index.php/Auth/Verify?vkey=' . $vkey . '">Click here</a> to activate your account<br><center>(or)</center><br>'.
+                'Copy paste the following link in any of your browsers<br>'
+                .base_url().'index.php/Auth/Verify?vkey='.$vkey;
 
 
                 
                 //sending mail
                 if ($mail->send()) {
-                    $this->session->set_flashdata('success', 'Thank you for registration. We have sent you a verification link.');
+                    $this->session->set_flashdata('success', 'Thank you for registration. We have sent you a verification link.Please do check in spam mails also.');
                     //$_SESSION["succes"] = "Your account has been registerd";
                     redirect('auth/register', 'refresh');
                 }
@@ -213,7 +215,7 @@ class Auth extends CI_Controller
                             $roll = $_POST['rollNum'];
                             $query = $this->db->query("SELECT email from users where verified = 0 and rollNum='$roll' LIMIT 1");
                             $r = $query->row();
-                            $this->session->set_flashdata('error', 'Your Account is not Verified Yet.Please click on the link which was sent to ' . $r->email );
+                            $this->session->set_flashdata('error', 'Your Account is not Verified Yet.Please click on the link which was sent to ' . $r->email .'    Do check in your spam mails.');
 
                             redirect('auth/login', 'refresh');
                         }

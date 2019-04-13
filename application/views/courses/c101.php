@@ -1,4 +1,4 @@
-<?php $this->session->flashdata('errorInDisenrolling'); ?>
+
 
 
 <style type="text/css">
@@ -56,6 +56,9 @@
     }
   }
 </style>
+
+
+<?php echo $this->session->flashdata('errorInDisenrolling'); ?>
 
 <div class="container">
   <a class="btn-success btn" style="float:right;" href="<?php echo site_url('Admin/downloadExcel') ?>">Export</a>

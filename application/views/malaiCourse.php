@@ -7,7 +7,7 @@ ul li , ol li{
 
 <div class="container course rounded">
         <div class="courseName"> <h1>Course Name : </h1> <h4> Machine learning & Artificial Intelligence</h4>
-        <h5>MaLai Club </h5>
+        <h5 style="color:yellow;">MaLai Club </h5>
         </div>
    
         <a href="<?php echo base_url() ?>index.php/Courses/register" class="btn btn-lg btn-success" value="Register" style="float:right;" >Register</a>
@@ -46,13 +46,13 @@ networks (CNN)
         <h2>Duration :  </h2> <p>12 Hours</p>
 <br>
 
-        <h2>Course Coordinator :  </h2> <p> A Obulesh, Asst. Prof. Dept. Of CSE</p>
+        <h2>Course Coordinator :  </h2> <p> A Obulesh, Asst. Prof. Dept. of CSE</p>
 <br>
 
         <h2>Instructors : </h2>
         <ol type="1">
             <li>Hari Narayana, IV B.Tech CSE</li>
-            <li>A Obulesh, Asst. Prof. Dept. Of CSE</li>
+            <li>A Obulesh, Asst. Prof. Dept. of CSE</li>
         </ol>
 <br>
         <h2>Industry Partner: </h2> <p>Wave Labs</p>

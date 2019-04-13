@@ -131,14 +131,16 @@
        { 
         echo   '<li class="nav-item dropdown active cool-link">
         <a class="nav-link dropdown-toggle username py-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.
-        $_SESSION['username'].' 
+               $_SESSION['username'].' 
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="'.base_url().'index.php/user/profile">Profile</a>
-
-        <a class="dropdown-item" href="'. base_url().'index.php/auth/logout ">Logout</a>
+        <a class="dropdown-item" href="'.base_url().'index.php/user/studentProfile">Profile</a>
+          <a class="dropdown-item" href="'.base_url().'index.php/user/registeredCourses">Registered Courses</a>
+          
+          <a class="dropdown-item" href="'. base_url().'index.php/auth/logout ">Logout</a>
         </div>
-        </li>';
+      </li>';
+                  
 
 
 

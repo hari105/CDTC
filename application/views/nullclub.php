@@ -131,11 +131,8 @@ to develop secure applications. We want to achieve our mission of imparting
 cyber security knowledge with a unique way of conducting various sessions
 including hands-on-sessions, seminars from Industry experts..</p>
 </div>
-<div class="container " style="padding-top:50px; width: 100%;">
-    
 
-</div>
-<div class="container" style="padding-top:50px;">
+<div class="container" style="padding-top:50px;color:white;">
   <h2>Achievements</h2>
  <div class="row">
    <div class="col-sm-12 col-xs-12 col-md-4" >
@@ -168,7 +165,4 @@ including hands-on-sessions, seminars from Industry experts..</p>
 
 </div>  
 
-<div class="container">
-  <center><h2>Detailed Null Club Information :<h2> <button type="button" name="" id="" class="btn btn-outline-success btn-lg btn-block text-light">View</button></center>
-</div>
 <?php $this->load->view('common/footer.php') ?>

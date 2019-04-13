@@ -9,7 +9,7 @@ ul li , ol li{
 <div class="container course rounded">
         <div class="courseName rounded"><h1>Course Name : </h1> <h4>Basics of Mobile App Development</h4>
         <p></p>
-        <h5>Android Club </h5>
+        <h5 style="color:yellow;">Android Club </h5>
 </div>
     
 <a href="<?php echo base_url() ?>index.php/Courses/register" class="btn btn-lg btn-success" value="Register" style="float:right;" >Register</a>

@@ -7,7 +7,7 @@ ul li , ol li{
 
 <div class="container course rounded">
         <div class="courseName"><h1>Course Name : </h1><h4> Dynamic web design </h4>
-        <h5>Web Club </h5>
+        <h5 style="color:yellow;">Web Club </h5>
          </div>
         
         <a href="<?php echo base_url() ?>index.php/Courses/register" class="btn btn-lg btn-success" value="Register" style="float:right;" >Register</a>
@@ -34,7 +34,7 @@ connectivity.</li>
              <ul style="list-style-type:square; " >
             <li><b>PHP Basics</b> : Introduction, XAMPP & WAMPP, Configure php.ini,
 PHP Syntax, Variables, Strings, Constants, Operators, Echo / Print,
-If-Else-Else if, Switch, Loops, Functions, string functions –
+If-Else, Switch, Loops, Functions, string functions –
 introduction, user defined functions, Strings & Patterns, Arrays, Date
 and Time
 

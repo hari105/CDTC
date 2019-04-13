@@ -3,14 +3,29 @@
 		display: block;
 	}
  
-
+ 
+  li a{
+    font-size: 18px;
+   
+  }
+  .dropdown-item{
+    font-size: 16px;
+  }
+  
 }
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
 	.cdtcText{
 		display: block;
-	}
-
+  }
   
+  li a{
+    font-size: 18px;
+  }
+  .dropdown-item{
+    font-size: 16px;
+  }
+
+ 
 }
 @media (min-width:640px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 .cdtcText{
@@ -22,9 +37,8 @@
 .cdtcText{
 		display: none;
 	}
-		 ul li  {
-    
-    padding: 10px 12px 10px 12px;
+  ul li  {
+    padding: 2px 12px 2px 12px;
     font-size: 14px;
     }
     li a{
@@ -41,7 +55,7 @@
 
 	 ul li  {
     
-    padding: 10px 25px 10px 25px;
+    padding: 2px 25px 2px 25px;
     font-size: 14px;
     }
     li a{
@@ -55,7 +69,7 @@
 	} 
   ul li  {
     
-    padding: 15px 30px 15px 30px;
+    padding: 2px 27px 2px 27px;
     font-size: 14px;
     }
     li a{
@@ -67,10 +81,10 @@
 .cdtcText{
 		display: none;
 	} 
-	ul li  {
+	ul li{
     
-    padding: 15px 30px 15px 30px;
-    font-size: 14px;
+    padding: 2px 30px 2px 30px;
+    font-size: 18px;
     }
     li a{
       /*text-transform: uppercase;*/

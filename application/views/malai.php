@@ -4,6 +4,7 @@
   width: 10px;
   height: 10px;
   border-radius: 100%;
+   }
 </style>
 
 
@@ -15,6 +16,7 @@
 <p align="justify">Anurag Web Club was initiated with the motto of developing Web applications  for the common people needs in daily life. The event was enlightened by the presence of several respected personalities  </p>
 </div>
 <br>
+<!--
 <div class="container">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -43,5 +45,5 @@
   </a>
 </div>
 </div>
-
+  -->
 <?php $this->load->view('common/footer.php') ?>

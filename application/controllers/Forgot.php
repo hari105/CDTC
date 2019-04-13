@@ -21,19 +21,27 @@ class Forgot extends CI_Controller
             $email = $result -> email;
 
 
-                        $to=$email;
-                        $subject = "CDTC Credentials";
-                       $message = "HallTicket No : ".$result->rollNum."\nPassword : ".$result->dupPwd;
-                        
-                        $headers = "From: sainathomdas@gmail.com" ;
-                        $headers .= "MIME-Version:1.0". "\r\n";
-                        $headers .= "Content-type:text/html;charset=UTF-8"."\r\n";
-
-
+                   
+                       
+                       require_once('PHPMailer/PHPMailerAutoload.php');
+                
+                       $mail = new PHPMailer;
+                       $mail->isSMTP();
+                       $mail->Host = "smtp.gmail.com";
+                       $mail->Port = 587;
+                       $mail->SMTPAuth = true;
+                       $mail->SMTPSecure = 'tls';
+                       $mail->Username = 'dummysainath@gmail.com';
+                       $mail->Password = 'trend123';
+                       $mail->setFrom('dummysainath@gmail.com', 'CDTC-AGI');
+                       $mail->addAddress($email);
+                       $mail->isHTML(true);
+                       $mail->Subject = 'CDTC Credentials';
+                       $mail->Body =  "HallTicket No : ".$result->rollNum."<br>Password : ".$result->dupPwd;
                         //sending mail 
-                        if(mail($to,$subject,$message,$headers ))
+                        if($mail->send())
                         {
-                            $this->session->set_flashdata('pwdSendingSucess','Credentials have been sent to '.$result->email);
+                            $this->session->set_flashdata('pwdSendingSucess','Credentials have been sent to '.$result->email.'Please do check in spam mails also.');
                             //$_SESSION["succes"] = "Your account has been registerd";
                              redirect('Forgot','refresh');
                         }

@@ -45,6 +45,7 @@ class User extends CI_Controller
         $res = $this->Usermodel->updateStudentDetails($htno, $studName, $phone);
         if ($res) {
             $this->session->set_flashdata('studentProfileUpdateResult', '<div class="alert alert-success">Profile Updated</div>');
+            $_SESSION['username'] = $studName;
             //      redirect('user/studentProfile','refresh');
         } else {
             $this->session->set_flashdata('studentProfileUpdateResult', '<div class="alert alert-danger">An unknown error occured</div>');
@@ -75,13 +76,15 @@ class User extends CI_Controller
                 $mail->setFrom('dummysainath@gmail.com', 'CDTC-AGI');
                 $mail->addAddress($email);
                 $mail->isHTML(true);
-                $mail->Subject = 'PHPMailer Checking';
-                $mail->Body = '<a href="'.base_url().'/index.php/Auth/Verify?vkey=' . $vkey . '">Click here</a> to activate your account';
+                $mail->Subject = 'CDTC email re-verification';
+                $mail->Body = '<a href="'.base_url().'index.php/Auth/Verify?vkey=' . $vkey . '">Click here</a> to activate your account<br><center>(or)</center><br>'.
+                'Copy paste the following link in any of your browsers<br>'
+                .base_url().'index.php/Auth/Verify?vkey='.$vkey;
 
 
                 
                 if ( $mail->send()) {
-                    $this->session->set_flashdata('studentProfileUpdateResult', '<div class="alert alert-success">Profile Updated and a verification mail has been sent to ' . $email . '</div>');
+                    $this->session->set_flashdata('studentProfileUpdateResult', '<div class="alert alert-success">Profile Updated and a verification mail has been sent to ' . $email . ' Please do check in spam mails also.</div>');
                     //        redirect('user/studentProfile','refresh');
                 }
             } else {

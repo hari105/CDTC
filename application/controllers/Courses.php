@@ -19,6 +19,11 @@ class Courses extends CI_Controller
 	function register()
 	{
 
+		if(isset($_SESSION['admin'])){
+			$this->session->set_flashdata('errorInDisenrolling', '<div class="alert alert-danger container">Admin cannot be registered into a course!</div>');
+			redirect('Admin/adminProfile', 'refresh');
+		}
+
 		if (!isset($_SESSION['user-logged'])) {
 
 			$_SESSION["error"] = "Please log in !";

@@ -32,24 +32,25 @@
     <p>
         <b>Center for Development of Technical Competencies (CDTC) </b>  <br>
         To bridge the gap between the needs of the industry and the academic
-        curricula Department of Computer Science and Engineering (CSE), Anurag Group of Institutions, Hyderabad in collaboration with industry introduces finishing school for students of all branches.
+        curriculum Department of Computer Science and Engineering (CSE), Anurag Group of Institutions
+        , Hyderabad in collaboration with industry introduces a centre for the students of all branches.
     </p>
     <p>
-    Through Finishing School, the students of various departments will get an opportunity to acquire and 
-        reinforce industry-specific current computer technological knowledge, skills, and competencies delivered by trained faculty and experts from various industry. 
+    Through this centre, the students of various departments will get an opportunity to acquire and 
+        reinforce industry-specific current computer technological knowledge, skills, and competencies delivered by trained faculty and from industry experts. 
    
     </p>
-                  
+    <p>Department has initiated various clubs like Web Club, Android Club and others. Interested students are registered through the course in the respective club and 
+        through the club training sessions are conducted to the registered students. At the end of the course studenrts are assessed and awarded certificated based on the merit.
+    </p>    
     
     <br>
     <div class="container text-center black-text  ">
                     <h1>About Dept of CSE</h1>
                     <p>
-                        Department of Computer Science and Engineering (CSE) was established in 2002 and accredited by NBA in 2009. The CSE department has been re-accredited by NBA in 2017, which is valid till 2020. From the inception the department is relentlessly working hard with commitment to provide best quality education. It has been recognized as one of the best learning centers and attracted the creamy layer of the students.</p>
-                <p>World class infrastructural facilities and the latest model computers equipped with updated technologies gives the students an everlasting learning experience. The leadership of the Dean and the dedicated team of faculty are persistent and bring in whole lot of expertise and experience to make the teaching – learning process unique.</p>
-                <p>Achieving First Rank in GATE 2010 is just a feather in the cap. “Top Performing College award” and “Top 3 All Girls team award” in IBM Great Mind Challenge contest (TGMC)-2015 are the latest achievements. Consistent track record of academic success and 90% placements in the best MNC’s make the department the most preferred.</p>
-
-
+                        Department of Computer Science and Engineering (CSE) was established in the year 2002. From the inception the department is relentlessly working hard with commitment to provide best quality education. It has been recognized as one of the best learning centers.</p>
+                <p>The leadership of the Dean and the dedicated team of faculty are persistent and bring in whole lot of expertise and experience to make the teaching – learning process unique.</p>
+                <p>Achieving First Rank in GATE 2010 is just a feather in the cap. “Top Performing College award” and “Top 3 All Girls team award” in IBM Great Mind Challenge contest (TGMC)-2015 are some of our achievements. Consistent track record of academic success and a good percentage of placements in the best MNC’s make the department the most preferred.</p>
                     </div>
                    
  </section>

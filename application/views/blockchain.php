@@ -8,11 +8,12 @@ ul li , ol li{
   width: 10px;
   height: 10px;
   border-radius: 100%;
+}
 </style>
 
 <div class="container course rounded">
         <div class="courseName"> <h1>Course Name : </h1> <h4>Block Chain</h4> 
-        <h5>NULL Club </h5>
+        <h5 style="color:yellow;"> NULL Club </h5>
         </div>
    
         <a href="<?php echo base_url() ?>index.php/Courses/register" class="btn btn-lg btn-success" value="Register" style="float:right;" >Register</a>
@@ -22,10 +23,10 @@ ul li , ol li{
         <h2>Objective:</h2>
         <ul style="list-style-type:square; " >
             <li>Understand blockchain and distributed ledger systems in a business
-environment</li>
+environment.</li>
             <li>Learn the important concepts and key use cases of blockchain for
-business</li>
-<li>Learn how assets can be transferred in a blockchain network</li>
+business.</li>
+<li>Learn how assets can be transferred in a blockchain network.</li>
         </ul>
 <br>
 
@@ -66,7 +67,7 @@ Programmes
         <ol type="1">
             <li>Bharat Nandan Reddy , III B.Tech,CSE-D</li>
             <li>K . P Nishikanth, II B.Tech,CSE-D</li>
-            <li>G Lavanya, Asst. Prof. Dept. Of CSE</li>
+            <li>G Lavanya, Asst. Prof. Dept. of CSE</li>
         </ol>
 <br>
         <h2>Industry Partner: </h2> <p>Idea Labs</p>
