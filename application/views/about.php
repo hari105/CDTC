@@ -143,7 +143,7 @@ ul{
    
     </p>
     <p>Department has initiated various clubs like Web Club, Android Club and others. Interested students are registered through the course in the respective club and 
-        through the club training sessions are conducted to the registered students. At the end of the course studenrts are assessed and awarded certificated based on the merit.
+        through the club training sessions are conducted to the registered students. At the end of the course students are assessed and awarded certificates based on the merit.
     </p>
                     </div>
                    
