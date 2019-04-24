@@ -121,6 +121,12 @@ h5, {
 h4 {
     color : black;
 }
+.card-title,.meta,.card-text{
+    color: black;
+}
+.card-footer{
+    color: #000033;
+}
 </style>
 <!-- CLub Course -->
 <div class="container" id="AndroidCourses">
