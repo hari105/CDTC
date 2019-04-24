@@ -140,7 +140,7 @@ h4 {
                         </div>
                     </div>
                     <div class="card-footer">
-                        <small>Registered Students : 45</small>
+                <small>Registered Students : <?php echo $Anum['numrows']; ?></small>
                         <a href="<?php echo base_url() ?>index.php/Courses/mobileapp" class="btn btn-info" role="button">Learn More</a>
                     </div>
                 </div>
@@ -173,7 +173,7 @@ algorithms to solve the real world problems.
                         </div>
                     </div>
                     <div class="card-footer">
-                        <small>Registered Students : 45</small>
+                        <small>Registered Students : <?php echo $Mnum['numrows']; ?></small>
                         <a href="<?php echo base_url() ?>index.php/Courses/malaiCourse" class="btn btn-info" role="button">Learn More</a>
                     </div>
                 </div>
@@ -207,7 +207,7 @@ physical world and the cyber space.
                         </div>
                     </div>
                     <div class="card-footer">
-                        <small>Registered Students : 45</small>
+                        <small>Registered Students : <?php echo $I1num['numrows']; ?></small>
                         <a href="<?php echo base_url() ?>index.php/Courses/iotCourse" class="btn btn-info" role="button">Learn More</a>
                     </div>
                 </div>
@@ -226,7 +226,7 @@ physical world and the cyber space.
                         </div>
                     </div>
                     <div class="card-footer">
-                        <small>Registered Students : 45</small>
+                        <small>Registered Students : <?php echo $I2num['numrows']; ?></small>
                         <a href="<?php echo base_url() ?>index.php/Courses/iotapp" class="btn btn-info" role="button">Learn More</a>
                     </div>
                 </div>
@@ -260,7 +260,7 @@ physical world and the cyber space.
                         </div>
                     </div>
                     <div class="card-footer">
-                        <small>Registered Students : 45</small>
+                        <small>Registered Students : <?php echo $W1num['numrows']; ?></small>
                         <a href="<?php echo base_url() ?>index.php/Courses/static" class="btn btn-info" role="button">Learn More</a>
                     </div>
                 </div>
@@ -279,7 +279,7 @@ physical world and the cyber space.
                         </div>
                     </div>
                     <div class="card-footer">
-                        <small>Registered Students : 45</small>
+                        <small>Registered Students : <?php echo $W2num['numrows']; ?></small>
                         <a href="<?php echo base_url() ?>index.php/Courses/dynamic" class="btn btn-info" role="button">Learn More</a>
                     </div>
                 </div>
@@ -313,7 +313,7 @@ in real time.
                         </div>
                     </div>
                     <div class="card-footer">
-                        <small>Registered Students : 45 </small>
+                        <small>Registered Students : <?php echo $Nnum['numrows']; ?> </small>
                         <a href="<?php echo base_url() ?>index.php/Courses/blockchain" class="btn btn-info" role="button">Learn More</a>
                     </div>
                 </div>
