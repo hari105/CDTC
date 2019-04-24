@@ -13,7 +13,19 @@ class Courses extends CI_Controller
 
 	function index()
 	{
-		$this->load->view('courses');
+		$data = array(
+			'Anum' => $this->Coursesmodel->getNoOfStudentsRegistered(101),
+			'Mnum' => $this->Coursesmodel->getNoOfStudentsRegistered(102),
+			'I1num' => $this->Coursesmodel->getNoOfStudentsRegistered(103),
+			'I2num' => $this->Coursesmodel->getNoOfStudentsRegistered(104),
+			'W1num' => $this->Coursesmodel->getNoOfStudentsRegistered(105),
+			'W2num' => $this->Coursesmodel->getNoOfStudentsRegistered(106),
+			'Nnum' => $this->Coursesmodel->getNoOfStudentsRegistered(107)
+			
+		);
+		
+		
+		$this->load->view('courses',$data);
 	}
 
 	function register()

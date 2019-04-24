@@ -34,10 +34,6 @@ class Coursesmodel extends CI_Model
 
     function enroll($data)
     {
-
-
-
-
         date_default_timezone_set('Asia/Kolkata');
         $d = array(
             'rollNum' => $data['htno'],
@@ -72,5 +68,13 @@ class Coursesmodel extends CI_Model
         $this->load->database();
         $query = $this->db->query('select register.rollNum,register.enrolledDate,users.username from register,users,courses where courses.courseID = ' . $cid . ' and courses.courseID = register.courseID and register.rollNum = users.rollNum');
         return $query->result();
+    }
+    
+    function getNoOfStudentsRegistered($cid)
+    {
+        $this->db->reconnect();
+        $this->load->database();
+        $query = $this->db->query('select COUNT(*) as numrows from register where courseID = ' . $cid );
+        return $query->row_array();
     }
 }
